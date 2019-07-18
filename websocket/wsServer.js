@@ -1,5 +1,5 @@
 var ws = require('nodejs-websocket');
-var Tips=require("./../config/zh-Ch");
+var Tips = require("./../config/zh-Ch");
 var db = require("./../mongodb/db.js");
 /**
  * @创建端口号
@@ -13,11 +13,13 @@ var wsServer = ws.createServer(function (conn) {
     conn.on(Tips.Setting.WebSocket.Text, function (str) {
         // var data = JSON.parse(str.toLowerCase());
         var data = JSON.parse(str);
-        var code=data.code.toLowerCase();
+        var code = data.code.toLowerCase();
+        var controller = data.controller.toLowerCase();
         switch (code) {
-            case code=Tips.Setting.Code.S:
+            case code = Tips.Setting.Code.S:
                 switch (data.controller) {
-                    case "getAllOrOne":
+                    //条件查询或查询全部
+                    case controller=Tips.Setting.Controller.GetAllOrOne:
                         db.GetAllOrOne(Tips.Setting.DB.table.tbUser, data.param.obj, function (err, res) {
                             conn.sendText(JSON.stringify(res))
                         });
@@ -26,12 +28,14 @@ var wsServer = ws.createServer(function (conn) {
                         break;
                 }
                 break;
-            case code=Tips.Setting.Code.A:
+            //用户管理员
+            case code = Tips.Setting.Code.Admin.A:
                 db.login(Tips.Setting.DB.table.tbAdmin, data.param.obj, function (err, res) {
                     conn.sendText(JSON.stringify(res))
                 });
                 break;
-            case code=Tips.Setting.Code.U:
+            //用户登录
+            case code = Tips.Setting.Code.User.U:
                 db.login(Tips.Setting.DB.table.tbUser, data.param.obj, function (err, res) {
                     console.log(res);
                     conn.sendText(JSON.stringify(res))
