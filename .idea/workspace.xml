@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f00596b1-0049-47c1-b7a9-9874d6ec63e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/zh-Ch.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/zh-Ch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/zh-Ch.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/config/zh-Ch.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/zh-Ch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/zh-Ch.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongodb/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/db.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websocket/wsServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/websocket/wsServer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/zh-Ch.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
@@ -48,11 +43,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="75">
+                <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/zh-Ch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="-754">
+              <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -97,10 +104,14 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Luo-yi-le &lt;2318927272@qq.com&gt;" />
         <option value="luoyile" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -113,6 +124,7 @@
         <option value="$PROJECT_DIR$/mongodb/db.js" />
         <option value="$PROJECT_DIR$/config/zh-Ch.js" />
         <option value="$PROJECT_DIR$/config/zh-Ch.ts" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -223,12 +235,20 @@
       <workItem from="1563161011197" duration="839000" />
       <workItem from="1563329027318" duration="1121000" />
       <workItem from="1563412285546" duration="16379000" />
-      <workItem from="1563457968192" duration="3146000" />
+      <workItem from="1563457968192" duration="3697000" />
     </task>
+    <task id="LOCAL-00001" summary="增加了修改和删除用户，所有提示或多次调用的参数归类到配置文档中">
+      <created>1563461408978</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563461408978</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35093000" />
+    <option name="totallyTimeSpent" value="35644000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -243,7 +263,7 @@
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.108982824" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.108982824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -255,9 +275,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3290461" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32960895" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.23324022" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23324022" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -274,8 +294,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="WebSocket+MongoDB+NodeJs" />
-    <option name="LAST_COMMIT_MESSAGE" value="WebSocket+MongoDB+NodeJs" />
+    <MESSAGE value="增加了修改和删除用户，所有提示或多次调用的参数归类到配置文档中" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加了修改和删除用户，所有提示或多次调用的参数归类到配置文档中" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/nodejs-websocket/Server.js">
@@ -332,15 +354,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/zh-Ch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="-754">
+          <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/config/zh-Ch.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="75">
+            <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
