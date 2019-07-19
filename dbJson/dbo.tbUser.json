@@ -1,0 +1,59 @@
+[
+    {
+        "_id" : ObjectId("5d1434950e1dca1c04906be8"),
+        "UId" : NumberInt(1001),
+        "UName" : "张三",
+        "ULoginId" : "zhangsan",
+        "UPassWord" : "zhangsan"
+    },
+    {
+        "_id" : ObjectId("5d14356c3160931c04d3af48"),
+        "UId" : NumberInt(1002),
+        "UName" : "李四",
+        "ULoginId" : "lisi",
+        "UPassWord" : "12345"
+    },
+    {
+        "_id" : ObjectId("5d1435873160931c04d3af49"),
+        "UId" : NumberInt(1003),
+        "UName" : "王五",
+        "ULoginId" : "wangwu",
+        "UPassWord" : "wangwu"
+    },
+    {
+        "_id" : ObjectId("5d14589f275746305097fdff"),
+        "UId" : NumberInt(1004),
+        "UName" : "田七",
+        "ULoginId" : "tainqi",
+        "UPassWord" : "tainqi"
+    },
+    {
+        "_id" : ObjectId("5d312623bad3976a7f204561"),
+        "UId" : NumberInt(1005),
+        "UName" : "刘亦菲",
+        "ULoginId" : "liuyifei",
+        "UPassWord" : "liuyifei"
+    },
+    {
+        "_id" : ObjectId("5d312623bad3976a7f204562"),
+        "UId" : NumberInt(1006),
+        "UName" : "张国荣",
+        "ULoginId" : "zhangguorong",
+        "UPassWord" : "zhangguorong"
+    },
+    {
+        "_id" : ObjectId("5d312712bad3976a7f20457f"),
+        "UId" : NumberInt(1007),
+        "UName" : "成龙",
+        "ULoginId" : "chenglong",
+        "UPassWord" : "chenglong"
+    },
+    {
+        "_id" : ObjectId("5d312712bad3976a7f204580"),
+        "UId" : NumberInt(1008),
+        "UName" : "周星驰",
+        "ULoginId" : "zhouxingchi",
+        "UPassWord" : "zhouxingchi"
+    }
+
+]

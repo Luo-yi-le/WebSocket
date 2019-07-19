@@ -49,6 +49,7 @@ export const Setting = {
             "207":"添加成功",
         }
     },
+    //即时通讯
     "WebSocket": {
         "Host": "127.0.0.1",
         "Port": "3003",
@@ -58,6 +59,7 @@ export const Setting = {
         "Message": "message"
 
     },
+    //数据库
     "DB": {
         "connStr": "mongodb://localhost:",
         "Port": "27017/",
@@ -70,17 +72,31 @@ export const Setting = {
     "Tip": {
         "tip1": "请输入账号和密码"
     },
-    "Code": {
+    //接受的状态码
+    "Tag": {
         "Admin": {
             "A": "a",
+            "S": "s",
         },
         "User": {
             "U": "u",
+            "S": "s",
         },
-        "S": "s",
     },
+    //控制器
     "Controller": {
-        "Login": "login",
-        "GetAllOrOne": "getallorone",
+        "Admin":{
+            "Login": "login",
+            "GetAllOrOne": "getallorone",
+        },
+        "User":{
+            "Login": "login",
+            "GetAllOrOne": "getallorone",
+        },
+    },
+    //角色 权限
+    "Role":{
+        "Admin":"admin",
+        "User":"user",
     }
 };

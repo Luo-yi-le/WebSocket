@@ -1,0 +1,9 @@
+{ 
+    "_id" : ObjectId("5d142d610e1dca1c04906be5"), 
+    "AId" : NumberInt(1001), 
+    "AName" : "张三", 
+    "ALoginID" : "zhangsan", 
+    "APassWord" : "123456", 
+    "ASex" : "男", 
+    "ABirthday" : "1998-8-8"
+}

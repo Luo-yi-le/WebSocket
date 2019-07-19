@@ -2,7 +2,7 @@ var MongoClient=require("mongodb").MongoClient;
 var Tips=require("./../config/zh-Ch");
 
 function _connect(callback){
-    MongoClient.connect(Tips.Setting.DB.connStr+Tips.Setting.DB.Port,{ useNewUrlParser: true },function(err,client){
+    MongoClient.connect(Tips.Setting.DB.connStr+Tips.Setting.DB.Port,{useNewUrlParser: true },function(err,client){
         if(err){
             console.log(Tips.Setting.Error["418"]);
         }else{
@@ -51,7 +51,7 @@ module.exports.login=function (table,obj,callback) {
     }else{
         _connect(function (db) {
             db.collection(table).find(obj).toArray(function (err,res) {
-                callback(err,res)
+                callback(err,res,Tips.Setting.Success["201"]);
             })
         })
     }
@@ -65,10 +65,12 @@ module.exports.login=function (table,obj,callback) {
  */
 module.exports.updateUser=function (table,obj,callback) {
     _connect(function (db) {
-        var str={$set:obj.newParam};
-        db.collection(table).updateOne(obj.sel,str,function (err,res) {
-            if (err) throw err;
-            callback(err,res)
+        db.collection(table).updateOne(obj.sel,{$set:obj.newParam},function (err,res) {
+            if (res.result.n==1){
+                callback(err,res,Tips.Setting.Success.Update["205"])
+            }else{
+                callback(err,res,Tips.Setting.Error.Update["420"])
+            }
         })
     })
 };
@@ -82,8 +84,11 @@ module.exports.updateUser=function (table,obj,callback) {
 module.exports.deleteUser=function (table,obj,callback) {
     _connect(function (db) {
         db.collection(table).deleteOne(obj,function (err,res) {
-            if (err) throw err;
-            callback(err,res)
+            if (res.result.n===1){
+                callback(err,res,Tips.Setting.Success.Delete["206"])
+            }else{
+                callback(err,res,Tips.Setting.Error.Delete["421"])
+            }
         })
     })
 };
