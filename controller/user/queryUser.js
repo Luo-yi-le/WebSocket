@@ -19,3 +19,17 @@ var Tips=require("./../../config/zh-Ch");
         });
     }
 };
+
+/**
+ * 查询用户所有信息
+ * @param controller
+ * @param list
+ * @param fun
+ */
+module.exports.selectUserInfo_user=function (controller,list,fun) {
+    if (Tips.Setting.Controller.User.GetAllOrOne === controller) {
+        db.login(Tips.Setting.DB.table.tbUser, list, function (err, res) {
+            fn(err, res)
+        });
+    }
+};

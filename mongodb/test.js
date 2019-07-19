@@ -37,7 +37,7 @@ var tbAdmin = "dbo.tbAdmin";
 // });
 
 //删除
-var obj={ULoginId:"zhangguorong"};
-db.deleteUser(tbUser,obj,function (err,res,tip) {
-    console.log(tip)
-});
+// var obj={ULoginId:"zhangguorong"};
+// db.deleteUser(tbUser,obj,function (err,res,tip) {
+//     console.log(tip)
+// });

@@ -77,10 +77,12 @@ export const Setting = {
         "Admin": {
             "A": "a",
             "S": "s",
+            "E":"e",
         },
         "User": {
             "U": "u",
             "S": "s",
+            "E":"e",
         },
     },
     //控制器
@@ -88,10 +90,14 @@ export const Setting = {
         "Admin":{
             "Login": "login",
             "GetAllOrOne": "getallorone",
+            "DeleteUser":"deleteuser",
+            "UpdateAdmin":"updateadmin",
         },
         "User":{
             "Login": "login",
             "GetAllOrOne": "getallorone",
+            "UpdateUser":"UpdateUser",
+
         },
     },
     //角色 权限

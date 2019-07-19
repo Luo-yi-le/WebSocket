@@ -1,9 +1,12 @@
-var admin = require("../controller/admin/queryAdmin");
-var user = require("../controller/user/queryUser");
+var adminQ = require("../controller/admin/queryAdmin");
+var userQ = require("../controller/user/queryUser");
+var adminA = require("../controller/admin/actionAdminr");
+var userA = require("../controller/user/actionUser");
+
 
 var ws = require('nodejs-websocket');
 var Tips = require("./../config/zh-Ch");
-var db = require("./../mongodb/db.js");
+
 /**
  * @创建端口号
  * @type {string}
@@ -34,11 +37,22 @@ var wsServer = ws.createServer(function (conn) {
                 switch (Tag) {
                     //管理员登陆
                     case Tips.Setting.Tag.Admin.A:
-                        admin.adminLoginController(Controller, data.param.obj, function (err, res) {
+                        adminQ.adminLoginController(Controller, data.param.obj, function (err, res) {
                             conn.sendText(JSON.stringify(res))
                         });
                         break;
-                    case Tips.Setting.Tag.Admin.S:break;
+                        //管理员查询用户所有信息
+                    case Tips.Setting.Tag.Admin.S:
+                        adminQ.selectUserInfo_admin(Controller.data.param.obj,function (err,res) {
+                            conn.sendText(JSON.stringify(res))
+                        });
+                        break;
+                        //管理员修改
+                    case Tips.Setting.Tag.Admin.E:
+                        adminA.update_admin(Controller.data.param.obj,function (err,res) {
+                            conn.sendText(JSON.stringify(res))
+                        });
+                        break;
                     default:
                         break;
                 }
@@ -51,11 +65,22 @@ var wsServer = ws.createServer(function (conn) {
                 switch (Tag) {
                     //用户登陆
                     case Tips.Setting.Tag.User.U:
-                        user.userLoginController(Controller, data.param.obj, function (err, res) {
+                        userQ.userLoginController(Controller, data.param.obj, function (err, res) {
                             conn.sendText(JSON.stringify(res))
                         });
                         break;
-                    case Tips.Setting.Tag.Admin.S:break;
+                    //用户查询
+                    case Tips.Setting.Tag.User.S:
+                        userQ.selectUserInfo_user(Controller,data.param.obj,function (err,res) {
+                            conn.sendText(JSON.stringify(res))
+                        });
+                        break;
+                    //用户修改
+                    case Tips.Setting.Tag.User.E:
+                        userA.update_user(Controller.data.param.obj,function (err,res) {
+                            conn.sendText(JSON.stringify(res))
+                        });
+                        break;
                     default:
                         break;
                 }
