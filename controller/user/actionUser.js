@@ -13,9 +13,8 @@ var Tips=require("./../../config/zh-Ch");
  */
 //TODo 未完成
 module.exports.update_user=function (controller,list,fn) {
-    var obj={sel:{ULoginId:"lisi"}, newParam:{UPassWord:"12345"}}
     if (Tips.Setting.Controller.User.UpdateUser === controller) {
-        db.updateUser(Tips.Setting.DB.table.tbUser, obj, function (err, res) {
+        db.updateUser(Tips.Setting.DB.table.tbUser, list, function (err, res) {
             fn(err, res)
         });
     }

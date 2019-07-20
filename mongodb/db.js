@@ -92,3 +92,19 @@ module.exports.deleteUser=function (table,obj,callback) {
         })
     })
 };
+
+/**
+ * @用户注册
+ * @param table
+ * @param obj
+ * @param callback
+ */
+module.exports.registerUser=function (table,obj,callback) {
+    db.collection(table).insertOne(obj,function (err,res) {
+        if (res.result.n===1){
+            callback(err,res,Tips.Setting.Success["203"])
+        }else{
+            callback(err,res,Tips.Setting.Error["417"])
+        }
+    })
+};

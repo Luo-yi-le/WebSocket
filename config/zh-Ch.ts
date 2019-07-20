@@ -59,7 +59,7 @@ export const Setting = {
         "Message": "message"
 
     },
-    //数据库
+    //mongodb数据库
     "DB": {
         "connStr": "mongodb://localhost:",
         "Port": "27017/",
@@ -68,6 +68,15 @@ export const Setting = {
             "tbUser": "dbo.tbUser",
             "tbAdmin": "dbo.tbAdmin",
         },
+    },
+    //mySql数据库
+    "MySql":{
+        "Host":"localhost",
+        "Port":"3306",
+        "user":"root",
+        "password" : '123456',
+        "database" : 'test',
+        "charset":"UTF8_GENERAL_CI"
     },
     "Tip": {
         "tip1": "请输入账号和密码"

@@ -18,3 +18,17 @@ module.exports.update_admin=function (controller,list,fn) {
         });
     }
 };
+
+/**
+ * 管理员删除用户
+ * @param controller
+ * @param list
+ * @param fn
+ */
+module.exports.delete_user=function (controller,list,fn) {
+    if (Tips.Setting.Controller.Admin.DeleteUser===controller) {
+        db.deleteUser(Tips.Setting.DB.table.tbUser,list,function (err,res) {
+            fn(err,res)
+        })
+    }
+};

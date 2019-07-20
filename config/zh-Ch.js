@@ -60,7 +60,7 @@ exports.Setting = {
         "Error": "error",
         "Message": "message"
     },
-    //数据库
+    //mongodb数据库
     "DB": {
         "connStr": "mongodb://localhost:",
         "Port": "27017/",
@@ -70,6 +70,15 @@ exports.Setting = {
             "tbAdmin": "dbo.tbAdmin",
         },
     },
+    //mySql数据库
+    "MySql": {
+        "Host": "localhost",
+        "Port": "3306",
+        "user": "root",
+        "password": '123456',
+        "database": 'test',
+        "charset": "UTF8_GENERAL_CI"
+    },
     "Tip": {
         "tip1": "请输入账号和密码"
     },
@@ -78,10 +87,12 @@ exports.Setting = {
         "Admin": {
             "A": "a",
             "S": "s",
+            "E": "e",
         },
         "User": {
             "U": "u",
             "S": "s",
+            "E": "e",
         },
     },
     //控制器
@@ -89,10 +100,13 @@ exports.Setting = {
         "Admin": {
             "Login": "login",
             "GetAllOrOne": "getallorone",
+            "DeleteUser": "deleteuser",
+            "UpdateAdmin": "updateadmin",
         },
         "User": {
             "Login": "login",
             "GetAllOrOne": "getallorone",
+            "UpdateUser": "UpdateUser",
         },
     },
     //角色 权限
