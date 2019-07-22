@@ -18,7 +18,7 @@
         // Default settings
         var settings = {
 
-            /** Whether this instance should log debug messages. */
+            /** Whether this instance should logs debug messages. */
             debug: false,
 
             /** Whether or not the websocket should attempt to connect immediately upon instantiation. */
@@ -258,7 +258,7 @@
     ReconnectingWebSocket.prototype.onerror = function(event) {};
 
     /**
-     * Whether all instances of ReconnectingWebSocket should log debug messages.
+     * Whether all instances of ReconnectingWebSocket should logs debug messages.
      * Setting this to true is the equivalent of setting all instances of ReconnectingWebSocket.debug to true.
      */
     ReconnectingWebSocket.debugAll = false;

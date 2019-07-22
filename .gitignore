@@ -1,0 +1,5 @@
+/.idea/
+/**/tsconfig*.json
+/node_modules
+/log4js/
+/js/reconnecting*.js
