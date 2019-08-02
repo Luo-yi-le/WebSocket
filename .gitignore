@@ -1,5 +1,11 @@
 /.idea/
-/**/tsconfig*.json
-/node_modules
-/log4js/
-/js/reconnecting*.js
+/tsconfig*.json
+/node_modules/
+/src/assets/log4js/logs
+/dist
+/static/js/reconnecting*.js
+/src/SQL/mySqlH/entity/*.js
+/src/SQL/mySqlH/entity/*.*.map
+/config/*.js
+/config/*.*.map
+/public

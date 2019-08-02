@@ -1,10 +1,15 @@
+var  log=require("../../assets/log4js/log4js");
+
 var db = require("./db.js");
-var Tips=require("./../config/zh-Ch");
+var Tips=require("../../../config/zh-Ch");
 var tbUser = "dbo.tbUser";
 var tbAdmin = "dbo.tbAdmin";
 
-const log4js = require('log4js');
-log4js.configure('../log4js/log4js.json');
+// var dirname=require("../../assets/log4js/test_log")
+// console.log(dirname.dirname())
+
+// const log4js = require('log4js');
+// log4js.configure((dirname.dirname()+'/log4js.json'));
 
 //查询l
 // var getallorone1=Tips.Setting.Controller.GetAllOrOne
@@ -15,10 +20,9 @@ log4js.configure('../log4js/log4js.json');
 //登陆
 var whereStr = {"ALoginID":'zhangsan',"APassWord":"123456"};
 db.login(tbAdmin,whereStr,function (err,data) {
-    const logger = log4js.getLogger("["+tbAdmin+"]");
-    logger.info(JSON.stringify(data))
-    //console.log(data)
-})
+    var logger=log.log.getLogger("["+tbAdmin+"]");
+    logger.info(JSON.stringify(data));
+});
 
 //获取ip
 // var os = require('os');
@@ -46,3 +50,6 @@ db.login(tbAdmin,whereStr,function (err,data) {
 // db.deleteUser(tbUser,obj,function (err,res,tip) {
 //     console.logs(tip)
 // });
+
+
+

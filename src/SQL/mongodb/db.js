@@ -1,5 +1,5 @@
 var MongoClient=require("mongodb").MongoClient;
-var Tips=require("./../config/zh-Ch");
+var Tips=require("../../../config/zh-Ch");
 
 function _connect(callback){
     MongoClient.connect(Tips.Setting.DB.connStr+Tips.Setting.DB.Port,{useNewUrlParser: true },function(err,client){

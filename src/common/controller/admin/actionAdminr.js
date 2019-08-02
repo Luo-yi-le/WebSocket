@@ -1,9 +1,10 @@
 /**
  * 增删改
  */
+var Controller =require( "../../../../config/Controller").Controller;
+var Mongodb= require ("../../../../config/Mongodb").Mongodb;
+var db = require("../../../SQL/mongodb/db");
 
-var db=require("./../../mongodb/db")
-var Tips=require("./../../config/zh-Ch");
 /**
  * 管理员修改
  * @param controller
@@ -12,8 +13,8 @@ var Tips=require("./../../config/zh-Ch");
  */
 //var obj={sel:{ULoginId:"lisi"}, newParam:{UPassWord:"12345"}}
 module.exports.update_admin=function (controller,list,fn) {
-    if (Tips.Setting.Controller.Admin.UpdateAdmin === controller) {
-        db.login(Tips.Setting.DB.table.tbUser, list, function (err, res) {
+    if (Controller.Admin.UpdateAdmin === controller) {
+        db.login(Mongodb.table.tbUser, list, function (err, res) {
             fn(err, res)
         });
     }
@@ -26,8 +27,8 @@ module.exports.update_admin=function (controller,list,fn) {
  * @param fn
  */
 module.exports.delete_user=function (controller,list,fn) {
-    if (Tips.Setting.Controller.Admin.DeleteUser===controller) {
-        db.deleteUser(Tips.Setting.DB.table.tbUser,list,function (err,res) {
+    if (Controller.Admin.DeleteUser===controller) {
+        db.deleteUser(Mongodb.table.tbUser,list,function (err,res) {
             fn(err,res)
         })
     }

@@ -1,22 +1,22 @@
-var adminQ = require("../controller/admin/queryAdmin");
-var userQ = require("../controller/user/queryUser");
-var adminA = require("../controller/admin/actionAdminr");
-var userA = require("../controller/user/actionUser");
+var adminQ = require("../../common/controller/admin/queryAdmin");
+var userQ = require("../../common/controller/user/queryUser");
+var adminA = require("../../common/controller/admin/actionAdminr");
+var userA = require("../../common/controller/user/actionUser");
 
 
 var ws = require('nodejs-websocket');
-var Tips = require("./../config/zh-Ch");
-
+var Tips = require("../../../config/zh-Ch");
+var WebSocket=require("../../../config/WebSocket").WebSocket;
 /**
  * @创建端口号
  * @type {string}
  */
-var PORT = Tips.Setting.WebSocket.Port, HOST = Tips.Setting.WebSocket.Host;
+var PORT = WebSocket.wsDrive.Port, HOST = WebSocket.wsDrive.Host;
 
 
 var wsServer = ws.createServer(function (conn) {
     console.log(Tips.Setting.Success["204"])
-    conn.on(Tips.Setting.WebSocket.Text, function (str) {
+    conn.on(WebSocket.Text, function (str) {
 
         //前端传来的数据
         var data = JSON.parse(str);
@@ -92,14 +92,14 @@ var wsServer = ws.createServer(function (conn) {
                 break;
         }
     });
-    conn.on(Tips.Setting.WebSocket.Close, function (code, reason) {
+    conn.on(WebSocket.Close, function (code, reason) {
         console.log(Tips.Setting.Close.c1001)
     })
-    conn.on(Tips.Setting.WebSocket.Error, function (err) {
+    conn.on(WebSocket.Error, function (err) {
         console.log(Tips.Setting.Error["419"]);
         console.log(err)
     })
-    conn.on(Tips.Setting.WebSocket.Message, function (msg) {
+    conn.on(WebSocket.Message, function (msg) {
         console.log(msg)
     })
 }).listen(PORT, HOST);

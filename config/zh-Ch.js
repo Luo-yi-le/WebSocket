@@ -51,63 +51,8 @@ exports.Setting = {
             "207": "添加成功",
         }
     },
-    //即时通讯
-    "WebSocket": {
-        "Host": "127.0.0.1",
-        "Port": "3003",
-        "Text": "text",
-        "Close": "close",
-        "Error": "error",
-        "Message": "message"
-    },
-    //mongodb数据库
-    "DB": {
-        "connStr": "mongodb://localhost:",
-        "Port": "27017/",
-        "database": "ProductSys",
-        "table": {
-            "tbUser": "dbo.tbUser",
-            "tbAdmin": "dbo.tbAdmin",
-        },
-    },
-    //mySql数据库
-    "MySql": {
-        "Host": "localhost",
-        "Port": "3306",
-        "user": "root",
-        "password": '123456',
-        "database": 'test',
-        "charset": "UTF8_GENERAL_CI"
-    },
     "Tip": {
         "tip1": "请输入账号和密码"
-    },
-    //接受的状态码
-    "Tag": {
-        "Admin": {
-            "A": "a",
-            "S": "s",
-            "E": "e",
-        },
-        "User": {
-            "U": "u",
-            "S": "s",
-            "E": "e",
-        },
-    },
-    //控制器
-    "Controller": {
-        "Admin": {
-            "Login": "login",
-            "GetAllOrOne": "getallorone",
-            "DeleteUser": "deleteuser",
-            "UpdateAdmin": "updateadmin",
-        },
-        "User": {
-            "Login": "login",
-            "GetAllOrOne": "getallorone",
-            "UpdateUser": "UpdateUser",
-        },
     },
     //角色 权限
     "Role": {
