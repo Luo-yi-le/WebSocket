@@ -29,7 +29,8 @@ module.exports.log=log4js.configure({
             maxLogSize: 10485760,
             backups:10,
             encoding: "utf-8",
-            compress: true
+            compress: true,
+            level: "error"
         },
         error: {
             type: "logLevelFilter",
@@ -48,12 +49,7 @@ module.exports.log=log4js.configure({
             type: "logLevelFilter",
             appender: "infoFile",
             level: "info"
-        },
-        // file: {
-        //     type: "file",
-        //     filename: __dirname + "/logs/log.log",
-        //     encoding: "utf-8"
-        // }
+        }
     },
     categories: {
         default: {

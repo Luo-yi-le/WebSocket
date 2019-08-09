@@ -1,13 +1,14 @@
 var MongoClient=require("mongodb").MongoClient;
 var Tips=require("../../../config/zh-Ch");
+var mg=require("../../../config/Mongodb").Mongodb;
 
 function _connect(callback){
-    MongoClient.connect(Tips.Setting.DB.connStr+Tips.Setting.DB.Port,{useNewUrlParser: true },function(err,client){
+    MongoClient.connect(mg.mgDrive.connStr+mg.mgDrive.Port,{useNewUrlParser: true },function(err,client){
         if(err){
             console.log(Tips.Setting.Error["418"]);
         }else{
             //指定数据库的名字"ProductSys"
-            var db=client.db(Tips.Setting.DB.database);
+            var db=client.db(mg.mgDrive.database);
             callback(db);
         }
     })
