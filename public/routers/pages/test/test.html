@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="import" href="../include/tpl_js_lib.html">
+    <script src="../../js/keyboard/keyboard_shortcuts.js"></script>
+
+</head>
+<body>
+<div id="menu">
+    <div>
+        <label>账号：<input type="text" id="ULoginId" value=""></label>
+        <label>密码：<input type="text" id="UPassWord" value=""></label>
+    </div>
+    <div >
+<!--        <button @click="userLogin1()" >登陆</button>-->
+    </div>
+    <button onclick="userLogin()" >登陆</button>
+</div>
+
+<script>
+    // var vs = new Vue({
+    //     el: "#menu",
+    //     data() {
+    //
+    //     },
+    //     methods: {
+    //         userLogin1() {
+    //             var ws = new ReconnectingWebSocket("ws://127.0.0.1:3003");
+    //             ws.timeoutInterval=10000;
+    //             var par = {"ULoginId": $("#ULoginId").val(), "UPassWord": $("#UPassWord").val()};
+    //             var data = {
+    //                 Tag: U,
+    //                 Controller: login,
+    //                 Role: user,
+    //                 param: {
+    //                     obj: par
+    //                 }
+    //             };
+    //
+    //             ws.onopen = function (evt) {
+    //                 console.log("连接成功");
+    //                 //向服务端发送信息
+    //                 ws.send(JSON.stringify(data));
+    //             };
+    //
+    //             ws.onmessage = function (res) {
+    //                 console.log(res.data);
+    //             };
+    //         }
+    //     },
+    //     created() {
+    //
+    //     }
+    // });
+    shortcut.add("Enter",function () {
+        userLogin();
+    });
+    function userLogin() {
+        var ws = new ReconnectingWebSocket("ws://127.0.0.1:3003");
+        var par = {"ULoginId": $("#ULoginId").val(), "UPassWord": $("#UPassWord").val()};
+        var data = {
+            Tag: "U",
+            Controller: "login",
+            Role: "user",
+            param: {
+                obj: par
+            }
+        };
+        ws.onopen = function(evt) {
+            console.log("连接成功");
+            //向服务端发送信息
+            ws.send(JSON.stringify(data));
+        };
+
+        ws.onmessage=function (res) {
+            console.log(res.data);
+        };
+    }
+</script>
+</body>
+</html>

@@ -10,7 +10,6 @@ var WebSocket = require("../../../config/WebSocket").WebSocket;
 
 //日志
 var log = require("../../assets/log4js/log4js");
-const emit = require("socket.io/lib/parent-namespace").emit;
 
 /**
  * @创建端口号

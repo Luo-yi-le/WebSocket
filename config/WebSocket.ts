@@ -9,6 +9,15 @@ export const WebSocket={
         "Error": "error",
         "Message": "message"
     },
+    //html驱动
+    "htmlDrive":{
+        "Host": "127.0.0.1",
+        "Port": "3099",
+        "Text": "text",
+        "Close": "close",
+        "Error": "error",
+        "Message": "message"
+    },
     //接受的状态码
     "Tag": {
         "Admin": {

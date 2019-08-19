@@ -9,3 +9,7 @@
 /config/*.js
 /config/*.*.map
 
+*.map
+*.*.map
+*.*.*.map
+

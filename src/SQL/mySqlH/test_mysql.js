@@ -7,6 +7,6 @@ var mysql=require("./mysqlFun.js");
 //         console.log(JSON.stringify(res));
 //     })
 // });
-mysql.query("select * from linkApi",[],function (res,fields) {
-    console.log(JSON.stringify(res));
+mysql.query("select * from html_href",[],function (res,fields) {
+    console.log((JSON.stringify(res)));
 })

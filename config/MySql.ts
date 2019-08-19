@@ -9,4 +9,8 @@ export const MySql={
         "database" : 'websocket_sys',
         "charset":"UTF8_GENERAL_CI"
     },
+    "Statement":{
+        "linkApi":"select * from linkApi",
+        "html_href":"select * from html_href"
+    }
 };
