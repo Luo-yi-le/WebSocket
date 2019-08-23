@@ -16,10 +16,12 @@ let stat=util.promisify(fs.stat);
 let readdir=util.promisify(fs.readdir);
 class Server{
     constructor(command) {
-        this.config = {...config,...command} // config和命令行的内容展示
+        this.config = {...config,...command};// config和命令行的内容展示
         this.template = template;
     };
     async handleRequest(req, res) {
+        res.setHeader('Access-Control-Allow-Origin',"*" );
+        res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, DELETE, PUT');
         let { dir } = this.config; // 需要将请求的路径和dir拼接在一起
         //如 http://localhost:8080/index.html
         let { pathname } = url.parse(req.url);
@@ -37,13 +39,14 @@ class Server{
                 let dirs = await readdir(p);
                 dirs = dirs.map(item=>({
                     name:item,
-                    // 因为点击第二层时 需要带上第一层的路径，所有拼接上就ok了
+                    // 因为点击第二层时 需要带上第一层的路径，所有拼接上
                     href:path.join(pathname,item)
                 }))
                 // 渲染template.html中需要填充的内容，name是当前文件目录，arr为当前文件夹下的目录数组
                 let str = ejs.render(this.template, {
-                    name: `文件 ${pathname}`,
-                    arr: dirs
+                    name: `http://${this.config.host}:${this.config.port} ${pathname}`,
+                    arr: dirs,
+                    icon:`http://${this.config.host}:${this.config.port}/img/favicon.ico`,
                 });
 
                 // 响应中返回填充内容
@@ -69,9 +72,9 @@ class Server{
         res.setHeader('Etag', eTag);
         res.setHeader('Last-Modified', lastModified);
         // 客户端把上次设置的带过来
-        let ifNoneMatch = req.headers['if-none-match'];
-        let ifModifiedSince = req.headers['if-modified-since'];
-        // 其中任意一个不生效缓存就不生效
+        let ifNoneMatch = req.headers['access-control-request-headers'];
+        let ifModifiedSince =req.headers['access-control-request-headers'];
+         // 其中任意一个不生效缓存就不生效
         if (eTag !== ifNoneMatch && lastModified !== ifModifiedSince) {
             return false;
         }
@@ -137,11 +140,11 @@ class Server{
         res.statusCode = 404;
         // 页面返回文字
         res.end(`404 Not Found`);
-        this.start();
+        //this.start();
     }
     start() {
         let server = http.createServer(this.handleRequest.bind(this));
-        server.listen(this.config.port, this.config.host, ()=> {
+        server.listen(this.config.port, ()=> {
             console.log(`server start http://${this.config.host}:${chalk.green(this.config.port)}`);
         });
     }

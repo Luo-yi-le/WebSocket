@@ -7,7 +7,8 @@
     "test": "mocha -r ts-node/register tests/**/*.test.ts",
     "tsc": "tsc -w",
     "run-server": "node src/server/websocket/wsServer.js",
-    "http-server": "node ./bin/www.js -d D:\\workingPaper\\WebStorm"
+    "html-server": "node src/server/websocket/htmlServer.js",
+    "src-server": "node ./bin/www.js -d ./resource"
   },
   "bin": {},
   "keywords": [],
@@ -20,11 +21,13 @@
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "http-server": "^0.11.1",
+    "ip": "^1.1.5",
     "log4js": "^4.5.1",
     "mime": "latest",
     "mongodb": "^3.2.7",
     "mysql": "^2.17.1",
     "nodejs-websocket": "^1.7.2",
+    "openssl": "^1.1.0",
     "os": "^0.1.1",
     "socket.io": "^2.2.0",
     "ts-node": "^8.3.0",

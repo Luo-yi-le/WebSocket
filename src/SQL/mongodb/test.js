@@ -24,20 +24,7 @@ db.login(tbAdmin,whereStr,function (err,data) {
     logger.info(JSON.stringify(data));
 });
 
-//获取ip
-// var os = require('os');
-// var ifaces = os.networkInterfaces();
-//
-// for (var dev in ifaces) {
-//     var alias = 0;
-//     ifaces[dev].forEach(function (details) {
-//         if (details.family == 'IPv4') {
-//             console.logs(details.address)
-//             //console.logs(dev + (alias ? ':' + alias : ''), details.address);
-//             ++alias;
-//         }
-//     });
-// }
+
 
 //修改
 // var obj={sel:{ULoginId:"lisi"}, newParam:{UPassWord:"12345"}};
