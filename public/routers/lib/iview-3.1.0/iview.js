@@ -788,11 +788,11 @@ var $export = function (type, name, source) {
     if (own && has(exports, key)) continue;
     // export native or passed
     out = own ? target[key] : source[key];
-    // prevent global pollution for namespaces
+    // prevent modules pollution for namespaces
     exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
-    // bind timers to global for call from export context
+    // bind timers to modules for call from export context
     : IS_BIND && own ? ctx(out, global)
-    // wrap global constructors for prevent change them in library
+    // wrap modules constructors for prevent change them in library
     : IS_WRAP && target[key] == out ? (function (C) {
       var F = function (a, b, c) {
         if (this instanceof C) {
@@ -817,7 +817,7 @@ var $export = function (type, name, source) {
 };
 // type bitmap
 $export.F = 1;   // forced
-$export.G = 2;   // global
+$export.G = 2;   // modules
 $export.S = 4;   // static
 $export.P = 8;   // proto
 $export.B = 16;  // bind
@@ -7659,7 +7659,7 @@ try {
 
 // g can still be undefined, but nothing to do about it...
 // We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
+// easier to handle this case. if(!modules) { ...}
 
 module.exports = g;
 
@@ -23418,7 +23418,7 @@ function isElement(obj) {
 /**
  * Creates an element resize detector instance.
  * @public
- * @param {Options?} options Optional global options object that will decide how this instance will work.
+ * @param {Options?} options Optional modules options object that will decide how this instance will work.
  */
 module.exports = function(options) {
     options = options || {};
@@ -23502,7 +23502,7 @@ module.exports = function(options) {
     /**
      * Makes the given elements resize-detectable and starts listening to resize events on the elements. Calls the event callback for each event for each element.
      * @public
-     * @param {Options?} options Optional options object. These options will override the global options. Some options may not be overriden, such as idHandler.
+     * @param {Options?} options Optional options object. These options will override the modules options. Some options may not be overriden, such as idHandler.
      * @param {element[]|element} elements The given array of elements to detect resize events of. Single element is also valid.
      * @param {function} listener The callback to be executed for each resize event for each element.
      */
@@ -32651,7 +32651,7 @@ module.exports = function () {
   // - setTimeout
   } else {
     notify = function () {
-      // strange IE + webpack dev server bug - use .call(global)
+      // strange IE + webpack dev server bug - use .call(modules)
       macrotask.call(global, flush);
     };
   }
@@ -33241,7 +33241,7 @@ function enumerable(rule, value, source, errors, options) {
 function pattern_pattern(rule, value, source, errors, options) {
   if (rule.pattern) {
     if (rule.pattern instanceof RegExp) {
-      // if a RegExp instance is passed, reset `lastIndex` in case its `global`
+      // if a RegExp instance is passed, reset `lastIndex` in case its `modules`
       // flag is accidentally set to `true`, which in a validation scenario
       // is not necessary and the result might be misleading
       rule.pattern.lastIndex = 0;
@@ -34269,13 +34269,13 @@ var reIsOctal = /^0o[0-7]+$/i;
 /** Built-in method references without a dependency on `root`. */
 var freeParseInt = parseInt;
 
-/** Detect free variable `global` from Node.js. */
+/** Detect free variable `modules` from Node.js. */
 var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
 
-/** Used as a reference to the global object. */
+/** Used as a reference to the modules object. */
 var root = freeGlobal || freeSelf || Function('return this')();
 
 /** Used for built-in method references. */
@@ -38157,7 +38157,7 @@ module.exports = function(options) {
 "use strict";
 
 
-/* global console: false */
+/* modules console: false */
 
 /**
  * Reporter that handles the reporting of logs, warnings and errors.

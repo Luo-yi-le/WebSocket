@@ -2,7 +2,7 @@
 export const WebSocket={
     //驱动
     "wsDrive":{
-        "Host": "127.0.0.1",
+        "Host": "192.168.60.107",
         "Port": "3003",
         "Text": "text",
         "Close": "close",
@@ -11,7 +11,7 @@ export const WebSocket={
     },
     //html驱动
     "htmlDrive":{
-        "Host": "127.0.0.1",
+        "Host": "192.168.60.107",
         "Port": "3099",
         "Text": "text",
         "Close": "close",

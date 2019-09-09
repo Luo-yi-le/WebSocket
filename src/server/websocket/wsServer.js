@@ -3,7 +3,6 @@ var userQ = require("../../common/controller/user/queryUser");
 var adminA = require("../../common/controller/admin/actionAdminr");
 var userA = require("../../common/controller/user/actionUser");
 
-
 var ws = require('nodejs-websocket');
 var Tips = require("../../../config/zh-Ch");
 var WebSocket = require("../../../config/WebSocket").WebSocket;
@@ -19,7 +18,7 @@ var PORT = WebSocket.wsDrive.Port, HOST = WebSocket.wsDrive.Host;
 
 
 var wsServer = ws.createServer(function (conn) {
-    console.log(Tips.Setting.Success["204"])
+    console.log(Tips.Setting.Success["204"]);
     conn.on(WebSocket.wsDrive.Text, function (str) {
 
         //前端传来的数据
@@ -108,7 +107,7 @@ var wsServer = ws.createServer(function (conn) {
     conn.on(WebSocket.wsDrive.Message, function (msg) {
         console.log(msg)
     })
-}).listen(PORT, HOST);
+}).listen(PORT);
 
 var logger = log.log.getLogger("[WebSocket]");
 logger.info('websocket wsServer listening on: ' + "ws://" + HOST + ":" + PORT);

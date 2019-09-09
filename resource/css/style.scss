@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@function pxToRem($px){
+  @return ($px / 1080 * 750) / 35 * 1rem;
+}
+
+$icoImage:"http://192.168.60.107:8080/img/ico/";
+$userImage:"http://192.168.60.107:8080/img/user/";
+
+@import "basestyle/index";
+@import "basestyle/login";
+@import "basestyle/default";

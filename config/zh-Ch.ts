@@ -47,7 +47,8 @@ export const Setting = {
         },
         "Insert":{
             "207":"添加成功",
-        }
+        },
+        "208":"WebSocket服务全部打开"
     },
     "Tip": {
         "tip1": "请输入账号和密码"

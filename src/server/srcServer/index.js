@@ -41,7 +41,7 @@ class Server{
                     name:item,
                     // 因为点击第二层时 需要带上第一层的路径，所有拼接上
                     href:path.join(pathname,item)
-                }))
+                }));
                 // 渲染template.html中需要填充的内容，name是当前文件目录，arr为当前文件夹下的目录数组
                 let str = ejs.render(this.template, {
                     name: `http://${this.config.host}:${this.config.port} ${pathname}`,

@@ -1,0 +1,289 @@
+@charset "UTF-8";
+.index_page {
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+
+
+  .btn {
+    cursor: pointer;
+    padding: pxToRem(5) pxToRem(15);
+    border: pxToRem(1) solid #ddd;
+    border-radius: pxToRem(3);
+  }
+
+  .layout {
+    background: #f5f7f9;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .layout-header-bar {
+    box-shadow: 0 pxToRem(1) pxToRem(1) rgba(0, 0, 0, .1);
+  }
+
+  .layout-logo {
+    width: pxToRem(50);
+    height: pxToRem(30); /*background: #5b6270; border-radius: 3px;*/
+    float: left;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .layout-time{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: pxToRem(260);
+    height: 100%;
+    color: rgba(255,255,255,0.7);
+    font-size: pxToRem(16);
+
+    .layout-time-logo{
+      background:#fff;
+      width: pxToRem(25);
+      border-radius: pxToRem(12);
+      height: pxToRem(25);
+      background-image: url($icoImage +"md_clock.svg");
+      background-repeat: no-repeat;
+      margin: pxToRem(12);
+    }
+    .layout-time-logo:hover{
+      transform: scale(1.2);
+    }
+    .layout-time-txt{
+      line-height: initial;
+      font-size: pxToRem(16);
+      color: rgba(255,255,255,0.7);;
+    }
+    .layout-time-txt:hover{
+      transform: scale(1.1);
+    }
+  }
+
+  .layout-nav {
+    width: pxToRem(600);
+    margin: 0 auto;
+    position: absolute;
+    right: pxToRem(25);
+    top: 0;
+
+    .layout-nav-user{
+      width: pxToRem(50);
+      height:pxToRem(50);
+      background-image: url($userImage +"default.png");
+      background-repeat: no-repeat;
+      background-size:  pxToRem(50)  pxToRem(50);
+      float: left;
+      position: relative;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+      font-size: pxToRem(16);
+      color: rgba(255,255,255,0.7);
+
+    }
+    .layout-nav-user:hover{
+      transform: scale(1.1);
+    }
+    .layout-nav-signout{
+      height:pxToRem(50);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: pxToRem(40);
+
+      &-close{
+        width: pxToRem(35);
+        background:#fff;
+        border-radius: pxToRem(17);
+        height: pxToRem(35);
+        background-image: url($icoImage +"close.svg");
+        background-repeat: no-repeat;
+      }
+      &-close:hover{
+        transform: scale(1.2);
+      }
+      &-txt{
+        font-size: pxToRem(16);
+      }
+    }
+  }
+
+  .ivu-layout-header {
+    z-index: 99;
+    padding-left: 0;
+  }
+
+  .ivu-tabs, .ivu-tabs-content, .ivu-tabs-tabpane {
+    height: 100% !important;
+  }
+
+  .ivu-tabs-bar {
+    margin-bottom: 0;
+  }
+
+  .ivu-menu-horizontal, .ivu-layout-header, .ivu-menu-horizontal {
+    line-height: pxToRem(50);
+    height: pxToRem(50);
+  }
+
+  .layout-logo-left {
+    width: 90%;
+    height: pxToRem(30);;
+    background: #5b6270;
+    border-radius: pxToRem(3);;
+    margin: pxToRem(15) auto;
+  }
+
+  .menu-icon {
+    transition: all .3s;
+  }
+
+  .rotate-icon {
+    transform: rotate(-90deg);
+    display: inline-block;
+  }
+
+  .menu-item span {
+    display: inline-block;
+    overflow: hidden;
+    width: pxToRem(95);;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+    transition: width .2s ease .2s;
+    line-height: pxToRem(23);
+  }
+
+  .menu-item i {
+    transform: translateX(0px);
+    transition: font-size .2s ease, transform .2s ease;
+    vertical-align: middle;
+    font-size: pxToRem(22);;
+  }
+
+  .collapsed-menu span {
+    width: 0;
+    transition: width .2s ease;
+  }
+
+  .collapsed-menu i {
+    transform: translateX(pxToRem(5));
+    transition: font-size .2s ease .2s, transform .2s ease .2s;
+    vertical-align: middle;
+    font-size: pxToRem(22);
+  }
+
+  .menu-toggle {
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .menu-toggle:hover {
+    color: #2d8cf0;
+  }
+
+  .sider-logo-text {
+    display: inline-block;
+    transition: width .2s ease .2s;
+    margin-left: pxToRem(33);
+    font-size: pxToRem(20);
+  }
+
+  .sider-logo {
+    color: #fff;
+    font-size: pxToRem(18);
+    font-weight: 600;
+    padding-top: pxToRem(15);
+    padding-bottom: pxToRem(10);
+    padding-left: pxToRem(0);
+    line-height: pxToRem(24);
+    vertical-align: middle;
+  }
+
+  .ivu-layout-sider-collapsed .sider-logo .sider-logo-text {
+    white-space: nowrap;
+    display: none;
+    width: 0 !important;
+    overflow: hidden;
+    transition: width .2s ease;
+  }
+
+  .sider-logo-icon {
+    width: 0;
+    display: inline-block;
+    overflow: hidden;
+    transition: all .3s;
+    font-size: pxToRem(16);
+  }
+
+  .ivu-layout-sider-collapsed .sider-logo-icon {
+    margin-left: pxToRem(18);
+    transition: all .3s;
+    font-size: pxToRem(25);
+    width: pxToRem(25);
+  }
+
+  .ivu-layout-sider-collapsed .ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item {
+    padding-left: pxToRem(5);
+  }
+
+  .ivu-layout-sider-collapsed .ivu-menu-submenu-title-icon {
+    display: none;
+  }
+
+  .ivu-menu {
+    position: relative;
+  }
+
+  .ivu-tabs.ivu-tabs-card {
+  }
+
+  .ivu-menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .ivu-menu-dark.ivu-menu-vertical .ivu-menu-item, .ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title {
+    color: rgba(255, 255, 255, .7);
+  }
+
+  .ivu-menu-dark.ivu-menu-vertical .ivu-menu-item:hover, .ivu-menu-dark.ivu-menu-vertical .ivu-menu-submenu-title:hover {
+    color: rgba(255, 255, 255, .7);
+  }
+
+  .ivu-menu-submenu-title span > i, .ivu-menu-submenu-title > i {
+    margin-right: pxToRem(1);
+  }
+
+  .ivu-layout-sider-collapsed .ivu-menu-vertical .ivu-menu-item, .ivu-layout-sider-collapsed .ivu-menu-vertical .ivu-menu-submenu-title {
+    padding: pxToRem(18) pxToRem(24);
+  }
+
+  #sider_menu {
+    height: 100%;
+    overflow: auto;
+  }
+
+  .ivu-menu-item > i {
+    margin-right: pxToRem(2);
+  }
+
+  #sider_menu .ivu-menu-item, #sider_menu .ivu-menu-submenu-title {
+    padding-right: pxToRem(5);
+  }
+
+  #sider_menu .ivu-menu-item {
+    padding-top: pxToRem(10);
+    padding-bottom: pxToRem(10);
+  }
+
+  .collapsed-menu .ivu-menu-item {
+    padding-top: pxToRem(8) !important;
+    padding-bottom: pxToRem(8) !important;
+  }
+}

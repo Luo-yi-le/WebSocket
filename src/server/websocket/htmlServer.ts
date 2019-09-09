@@ -49,10 +49,10 @@ class HtmlServer {
             conn.on(socket.WebSocket.wsDrive.Message, function (msg) {
                 console.log(msg)
             })
-        }).listen(PORT, HOST)
+        }).listen(PORT);
 
         var logger = log.log.getLogger("[WebSocket]");
-        logger.info('websocket wsServer listening on: ' + "ws://" + HOST + ":" + PORT);
+        logger.info('websocket HtmlServer listening on: ' + "ws://" + HOST + ":" + PORT);
     }
 }
 export=HtmlServer;

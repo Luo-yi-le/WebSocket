@@ -8,6 +8,7 @@
 /src/SQL/mySqlH/entity/*.*.map
 /config/*.js
 /config/*.*.map
+/resource/css/*.css
 
 *.map
 *.*.map

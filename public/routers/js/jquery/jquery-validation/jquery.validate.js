@@ -749,8 +749,8 @@ $.extend( $.validator, {
 				val = this.elementValue( element ),
 				result, method, rule, normalizer;
 
-			// Prioritize the local normalizer defined for this element over the global one
-			// if the former exists, otherwise user the global one in case it exists.
+			// Prioritize the local normalizer defined for this element over the modules one
+			// if the former exists, otherwise user the modules one in case it exists.
 			if ( typeof rules.normalizer === "function" ) {
 				normalizer = rules.normalizer;
 			} else if (	typeof this.settings.normalizer === "function" ) {

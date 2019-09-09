@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.default_page{
+  position: relative;
+  width: 100%;
+  h2 {
+    border-bottom: pxToRem(1) solid #ddd;
+    padding-bottom: pxToRem(8);
+    margin-bottom: pxToRem(8);
+    margin-top: pxToRem(15);
+  }
+
+  h3 {
+    padding: pxToRem(12) 0 pxToRem(8);
+    margin: pxToRem(8) 0 pxToRem(5);
+  }
+
+  p {
+    margin: pxToRem(12) 0 pxToRem(8);
+    line-height:pxToRem(40);
+  }
+}

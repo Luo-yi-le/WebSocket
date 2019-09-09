@@ -124,7 +124,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var bind = __webpack_require__(3);
 	var isBuffer = __webpack_require__(4);
 	
-	/*global toString:true*/
+	/*modules toString:true*/
 	
 	// utils is a library of generic helper functions non-specific to axios
 	

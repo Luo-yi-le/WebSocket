@@ -2,6 +2,7 @@ var token = localStorage.getItem("dnc_token");
 if (!token) {
 	window.location.href = "login.html";
 }
+
 Vue.prototype.$Message.config({
 	top: 10,
 	duration: 3

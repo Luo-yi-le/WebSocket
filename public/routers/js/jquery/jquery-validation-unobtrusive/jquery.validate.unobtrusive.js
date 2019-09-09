@@ -3,7 +3,7 @@
 // @version v3.2.9
 
 /*jslint white: true, browser: true, onevar: true, undef: true, nomen: true, eqeqeq: true, plusplus: true, bitwise: true, regexp: true, newcap: true, immed: true, strict: false */
-/*global document: false, jQuery: false */
+/*modules document: false, jQuery: false */
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
@@ -13,7 +13,7 @@
         // CommonJS-like environments that support module.exports     
         module.exports = factory(require('jquery-validation'));
     } else {
-        // Browser global
+        // Browser modules
         jQuery.validator.unobtrusive = factory(jQuery);
     }
 }(function ($) {
