@@ -73,6 +73,7 @@ var vm = new Vue({
             if (data.length > 0) {
                 this.loadingbar.show = false;
                 this.$Message.success("登录成功");
+                this.getIpAddress();
                 //设置用户TOKEN于localStorage中,系统首页依据此TOKEN来验证是否已登录
                 localStorage.setItem("dnc_token", JSON.stringify(data));
                 this.goHtml();
@@ -87,7 +88,17 @@ var vm = new Vue({
             shortcut.add("Enter", function() {
                 that.handleLogin();
             })
+        },
+        getIpAddress(){
+            $.ajax({
+                url:"http://192.168.60.107:8089/",
+                type:"get",
+                success:function (res) {
+                    console.log(res,"success")
+                }
+            })
         }
+
     },
     created() {
         this.enterClick();

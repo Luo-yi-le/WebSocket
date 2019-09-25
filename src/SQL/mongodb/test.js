@@ -18,11 +18,11 @@ var tbAdmin = "dbo.tbAdmin";
 // });
 
 //登陆
-var whereStr = {"ALoginID":'zhangsan',"APassWord":"123456"};
-db.login(tbAdmin,whereStr,function (err,data) {
-    var logger=log.log.getLogger("["+tbAdmin+"]");
-    logger.info(JSON.stringify(data));
-});
+// var whereStr = {"ALoginID":'zhangsan',"APassWord":"123456"};
+// db.login(tbAdmin,whereStr,function (err,data) {
+//     var logger=log.log.getLogger("["+tbAdmin+"]");
+//     logger.info(JSON.stringify(data));
+// });
 
 
 
@@ -37,6 +37,8 @@ db.login(tbAdmin,whereStr,function (err,data) {
 // db.deleteUser(tbUser,obj,function (err,res,tip) {
 //     console.logs(tip)
 // });
+
+
 
 
 

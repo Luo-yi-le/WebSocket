@@ -17,7 +17,7 @@ var log = require("../../assets/log4js/log4js");
 var PORT = WebSocket.wsDrive.Port, HOST = WebSocket.wsDrive.Host;
 
 
-var wsServer = ws.createServer(function (conn) {
+var wsServer = ws.createServer(function (conn,res) {
     console.log(Tips.Setting.Success["204"]);
     conn.on(WebSocket.wsDrive.Text, function (str) {
 
@@ -96,6 +96,7 @@ var wsServer = ws.createServer(function (conn) {
                 break;
         }
     });
+
     conn.on(WebSocket.wsDrive.Close, function (code, reason) {
         var logger = log.log.getLogger("["+"WebSocket："+WebSocket.wsDrive.Close+"]");
         logger.off(Tips.Setting.Close.c1001);

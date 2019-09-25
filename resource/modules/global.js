@@ -67,7 +67,7 @@
         , supportWebSocket: function () {
             return (function () {
                 if (typeof WebSocket !== "undefined") {
-                    alert('支持')
+                    // alert('支持')
                 } else {
                     alert("不支持")
                 }
