@@ -1,7 +1,7 @@
 /.idea/
 /tsconfig*.json
 /node_modules/
-/src/assets/log4js/logs
+
 /dist
 /static/js/reconnecting*.js
 /src/SQL/mySqlH/entity/*.js
@@ -9,7 +9,9 @@
 /config/*.js
 /config/*.*.map
 /resource/css/*.css
-
+*.log
+*.*.log
+*.*.*.log
 *.map
 *.*.map
 *.*.*.map

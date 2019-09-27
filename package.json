@@ -8,7 +8,10 @@
     "tsc": "tsc -w",
     "run-server": "node src/server/websocket/wsServer.js",
     "html-server": "node src/server/websocket/htmlServer.js",
-    "src-server": "node ./bin/www.js -d ./resource"
+    "src-server": "node ./bin/www.js -d ./resource",
+    "pm2_start":"pm2 startOrRestart ecosystem.config.js",
+    "pm2_stopAll": "pm2 stop all",
+    "pm2 delete ": "pm2 delete all"
   },
   "bin": {},
   "keywords": [],
