@@ -4,7 +4,7 @@ var db = require("./db.js");
 var Tips=require("../../../config/zh-Ch");
 var tbUser = "dbo.tbUser";
 var tbAdmin = "dbo.tbAdmin";
-
+var Controller =require( "../../../config/Controller").Controller;
 // var dirname=require("../../assets/log4js/test_log")
 // console.log(dirname.dirname())
 
@@ -12,10 +12,10 @@ var tbAdmin = "dbo.tbAdmin";
 // log4js.configure((dirname.dirname()+'/log4js.json'));
 
 //查询l
-// var getallorone1=Tips.Setting.Controller.GetAllOrOne
-// db.GetAllOrOne(tbUser,"{}",function (err,data) {
-//     console.logs(data)
-// });
+var getallorone1=Controller.User.GetAllOrOne
+db.GetAllOrOne(tbUser,{},function (err,data) {
+    console.log(data)
+});
 
 //登陆
 // var whereStr = {"ALoginID":'zhangsan',"APassWord":"123456"};

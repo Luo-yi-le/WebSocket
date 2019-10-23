@@ -32,7 +32,7 @@ var wsServer = ws.createServer(function (conn,res) {
 
         //控制器
         var Controller = data.Controller.toLowerCase();
-
+        console.log(Controller)
         //循环权限
         switch (Role) {
             //判断管理员
@@ -47,13 +47,20 @@ var wsServer = ws.createServer(function (conn,res) {
                         break;
                     //管理员查询用户所有信息
                     case  WebSocket.Tag.Admin.S:
-                        adminQ.selectUserInfo_admin(Controller.data.param.obj, function (err, res) {
+                        adminQ.selectUserInfo_admin(Controller,data.param.obj, function (err, res) {
                             conn.sendText(JSON.stringify(res))
                         });
                         break;
                     //管理员修改
-                    case WebSocket.Tag.Admin.E:
-                        adminA.update_admin(Controller.data.param.obj, function (err, res) {
+                    case WebSocket.Tag.Admin.U:
+                        adminA.update_admin(Controller,data.param.obj, function (err, res) {
+                            conn.sendText(JSON.stringify(res))
+                        });
+                        break;
+                    case WebSocket.Tag.Admin.D:
+                        console.log("res :",Controller,data.param.obj);
+                        adminA.delete_user(Controller,data.param.obj, function (err, res) {
+
                             conn.sendText(JSON.stringify(res))
                         });
                         break;
@@ -64,27 +71,31 @@ var wsServer = ws.createServer(function (conn,res) {
 
 
             //判断用户
-            case Role = Tips.Setting.Role.User:
+            case Tips.Setting.Role.User:
+
                 //循环User传来的Tag
                 switch (Tag) {
+
                     //用户登陆
-                    case WebSocket.Tag.User.U:
+                    case WebSocket.Tag.User.L:
                         userQ.userLoginController(Controller, data.param.obj, function (err, res) {
+
                             conn.sendText(JSON.stringify(res))
                         });
                         break;
                     //用户查询
                     case WebSocket.Tag.User.S:
-                        userQ.selectUserInfo_user(Controller, data.param.obj, function (err, res) {
-                            conn.sendText(JSON.stringify(res))
+                        userQ.selectUserInfo_user(Controller, data.param.obj, async function (err, res) {
+                            await conn.sendText(JSON.stringify(res))
                         });
                         break;
                     //用户修改
-                    case WebSocket.Tag.User.E:
+                    case WebSocket.Tag.User.U:
                         userA.update_user(Controller.data.param.obj, function (err, res) {
                             conn.sendText(JSON.stringify(res))
                         });
                         break;
+
                     default:
                         break;
                 }
@@ -92,7 +103,7 @@ var wsServer = ws.createServer(function (conn,res) {
 
             //默认
             default:
-                conn.sendText(data);//收到直接发回去
+                conn.sendText(JSON.stringify(data));//收到直接发回去
                 break;
         }
     });

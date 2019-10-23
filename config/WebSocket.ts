@@ -23,12 +23,14 @@ export const WebSocket={
         "Admin": {
             "A": "a",
             "S": "s",
-            "E":"e",
+            "D":"d",
+            "U":"u",
         },
         "User": {
+            "L":"l",
             "U": "u",
             "S": "s",
-            "E":"e",
+            "D":"d",
         },
     },
 };

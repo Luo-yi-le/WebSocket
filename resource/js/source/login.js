@@ -1,10 +1,14 @@
-const ws = new WebSocket("ws://192.168.60.107:3003");
-ws.onopen = function() {
-    alert("连接成功")
-};
+import * as con from "../../modules/config.js"
+let fig=con.config;
+
+const ws = new ReconnectingWebSocket(fig.url._ws1);
+ws.timeoutInterval = fig.number.thousand*3;
+// ws.onopen = function() {
+//     alert("连接成功")
+// };
 
 var vm = new Vue({
-    el: "#app",
+    el: "#login",
     data: function() {
         return {
             loadingbar: {
@@ -22,20 +26,20 @@ var vm = new Vue({
             var flag = true;
             if (that.loginViewModel.userName === "") {
                 that.doLogin();
-                that.$Message.error("账号不能为空");
+                that.$Message.error(fig.loginFig.loginId_null);
                 that.noLogin();
                  flag = false;
                 return;
             } else if (that.loginViewModel.password === "") {
                 that.doLogin();
-                that.$Message.error("密码不能为空");
+                that.$Message.error(fig.loginFig.password_null);
                 that.noLogin();
                  flag = false;
                 return;
             }
             var par = {
-                "ALoginID": that.loginViewModel.userName,
-                "APassWord": that.loginViewModel.password
+                [fig.loginFig.A_LoginID]: that.loginViewModel.userName,
+                [fig.loginFig.A_PassWord]: that.loginViewModel.password
             };
             var data = {
                 Tag: "A",
@@ -51,7 +55,7 @@ var vm = new Vue({
                     that.doLogin();
                     setTimeout(function() {
                         that.completeLogin(JSON.parse(res.data));
-                    }, 2000);
+                    }, fig.number.thousand*2);
                 };
             }
 
@@ -62,37 +66,37 @@ var vm = new Vue({
         noLogin: function() {
             setTimeout(() => {
                 this.loadingbar.show = false;
-            }, 1000)
+            }, fig.number.thousand)
         },
         goHtml() {
             setTimeout(() => {
                 window.location.href = "index.html";
-            }, 1000)
+            }, fig.number.thousand)
         },
         completeLogin: function(data) {
             if (data.length > 0) {
                 this.loadingbar.show = false;
-                this.$Message.success("登录成功");
+                this.$Message.success(fig.loginFig.$success);
                 this.getIpAddress();
                 //设置用户TOKEN于localStorage中,系统首页依据此TOKEN来验证是否已登录
-                localStorage.setItem("dnc_token", JSON.stringify(data));
+                localStorage.setItem(fig.localStorage.$dnc_token, JSON.stringify(data));
                 this.goHtml();
             } else if (data.length <= 0) {
                 this.loadingbar.show = false;
-                this.$Message.error("登录失败！请检查账号密码是否正确");
+                this.$Message.error(fig.loginFig.$error);
                 return;
             }
         },
         enterClick() {
             const that = this;
-            shortcut.add("Enter", function() {
+            shortcut.add(fig.shortcutKey.$Enter, function() {
                 that.handleLogin();
             })
         },
         getIpAddress(){
             $.ajax({
-                url:"http://192.168.60.107:8089/",
-                type:"get",
+                url:fig.url._http1,
+                type:fig.url.$get,
                 success:function (res) {
                     console.log(res,"success")
                 }

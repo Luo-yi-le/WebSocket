@@ -3,9 +3,12 @@
   @return ($px / 1080 * 750) / 35 * 1rem;
 }
 
+
 $icoImage:"http://192.168.60.107:8080/img/ico/";
 $userImage:"http://192.168.60.107:8080/img/user/";
 
+@import "basestyle/base";
 @import "basestyle/index";
 @import "basestyle/login";
 @import "basestyle/default";
+@import "basestyle/modal";

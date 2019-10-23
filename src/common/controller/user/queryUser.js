@@ -28,9 +28,9 @@ var db = require("../../../SQL/mongodb/db");
  * @param fun
  */
 module.exports.selectUserInfo_user=function (controller,list,fun) {
-    if (Controller.User.GetAllOrOne === controller) {
+     if (Controller.User.GetAllOrOne === controller) {
         db.login(Mongodb.table.tbUser, list, function (err, res) {
-            fn(err, res)
+            fun(err, res)
         });
     }
 };

@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+.hide{
+  display: none !important;
+}
+
+.btn2{
+  width: pxToRem(90);
+  height: pxToRem(48);
+  border-radius: .2rem;
+  font-size: pxToRem(23);
+  margin: 0 pxToRem(2) 0 0;
+}
+
+.btn1{
+  width: pxToRem(130);
+  height: pxToRem(48);
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  border: pxToRem(1) solid transparent;
+  font-size: pxToRem(24);
+  line-height: 1.5;
+  border-radius: .2rem;
+  user-select: none;
+  -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+//确认按钮
+.confirm{
+  background-color: #47bac1;
+  border-color: #47bac1;
+}
+.confirm:hover{
+  background-color: #39a2a9;
+  border-color: #36999f;
+
+}
+.confirm:not(:disabled):not(.disabled):active{
+  color: #fff;
+  background-color: #36999f;
+  border-color: #329096;
+}
+//.confirm:focus{
+//  box-shadow: 0 0 0 0.2rem rgba(65,164,170,.5);
+//}
+.confirm:not(:disabled):not(.disabled):active:focus{
+  box-shadow: 0 0 0 0.2rem rgba(65,164,170,.5);
+}
+
+
+//取消按钮
+.cancel{
+  background-color: #a180da;
+  border-color: #a180da;
+}
+.cancel:hover{
+  background-color: #8b62d1;
+  border-color: #8459ce;
+}
+.cancel:not(:disabled):not(.disabled):active{
+  background-color: #8459ce;
+  border-color: #7c4fcc;
+}
+//.cancel:focus {
+//  box-shadow: 0 0 0 0.2rem rgba(175,147,224,.5);
+//}
+.cancel:not(:disabled):not(.disabled):active:focus{
+  box-shadow: 0 0 0 0.2rem rgba(175,147,224,.5);
+}
+

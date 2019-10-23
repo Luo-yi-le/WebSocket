@@ -8,9 +8,8 @@
 	},
 	{
 	"title": "系统管理", "name": "2", "icon": "ios-settings-outline", "menuItem": [
-		{ "label": "权限管理", "name": "2-1", "href": "pages/basic/settings/index.html", "icon": "ios-construct-outline", "closable": true },
-		{ "label": "组织机构", "name": "2-2", "href": "pages/basic/settings/evn.html", "icon": "ios-build-outline", "closable": true },
-		{ "label": "基础设置", "name": "2-4", "href": "pages/basic/settings/evn.html", "icon": "ios-lock-outline", "closable": true }
+		{ "label": "爆笑校园", "name": "2-1", "href": "https://ac.qq.com/ComicView/index/id/490950/cid/1", "icon": "ios-construct-outline", "closable": true },
+		{ "label": "ICON设置", "name": "2-2", "href": "https://me.jinchuang.org/Gallery/", "icon": "ios-lock-outline", "closable": true }
 	] 
 	},
 	{

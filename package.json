@@ -11,7 +11,8 @@
     "src-server": "node ./bin/www.js -d ./resource",
     "pm2_start":"pm2 startOrRestart ecosystem.config.js",
     "pm2_stopAll": "pm2 stop all",
-    "pm2 delete ": "pm2 delete all"
+    "pm2 delete ": "pm2 delete all",
+    "browserify": "browserify ./resource/modules/config.js -o ./resource/modules/config_new.js"
   },
   "bin": {},
   "keywords": [],

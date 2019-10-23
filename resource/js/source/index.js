@@ -1,4 +1,6 @@
-var token = localStorage.getItem("dnc_token");
+import * as con from "../../modules/config.js"
+
+var token = localStorage.getItem(con.config.localStorage.$dnc_token);
 if (!token) {
 	window.location.href = "login.html";
 }
@@ -8,7 +10,7 @@ Vue.prototype.$Message.config({
 	duration: 3
 });
 var vm = new Vue({
-	el: '#app',
+	el: '#index',
 	data: {
 		windowHeight: 0,
 		frameHeight: 0,
@@ -17,7 +19,7 @@ var vm = new Vue({
 			height: 300
 		},
 		tab: {
-			type: "line" //可选值:line,card
+			type: "card" //可选值:line,card
 		},
 		currentTab: {
 			index: 0,
@@ -227,7 +229,7 @@ var vm = new Vue({
 
 		},
 		handleSwitchTabType: function() {
-			this.tab.type = this.tab.type === "line" ? "card" : "line";
+			this.tab.type = this.tab.type === "card" ? "line" : "card";
 		},
 		findNextTabIndex: function() {
 			var index = this.currentTab.index - 1;

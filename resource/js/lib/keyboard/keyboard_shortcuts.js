@@ -1,7 +1,13 @@
+/**
+ * 监控键盘按钮
+ * @time 2019-09-2
+ * lonely
+ * @type {{add: shortcut.add, all_shortcuts: {}, remove: shortcut.remove}}
+ */
+
 shortcut = {
-    'all_shortcuts': {}, //All the shortcuts are stored in this array
+    'all_shortcuts': {},
     'add': function (shortcut_combination, callback, opt) {
-        //Provide a set of default options
         var default_options = {
             'type': 'keydown',
             'propagate': false,
@@ -21,11 +27,10 @@ shortcut = {
         var ths = this;
         shortcut_combination = shortcut_combination.toLowerCase();
 
-        //The function to be called at keypress
         var func = function (e) {
             e = e || window.event;
 
-            if (opt['disable_in_input']) { //Don't enable shortcut keys in Input, Textarea fields
+            if (opt['disable_in_input']) {
                 var element;
                 if (e.target) element = e.target;
                 else if (e.srcElement) element = e.srcElement;
@@ -39,14 +44,12 @@ shortcut = {
             else if (e.which) code = e.which;
             var character = String.fromCharCode(code).toLowerCase();
 
-            if (code === 188) character = ","; //If the user presses , when the type is onkeydown
-            if (code === 190) character = "."; //If the user presses , when the type is onkeydown
+            if (code === 188) character = ",";
+            if (code === 190) character = ".";
 
             var keys = shortcut_combination.split("+");
-            //Key Pressed - counts the number of valid keypresses - if it is same as the number of keys, the shortcut function is invoked
             var kp = 0;
 
-            //Work around for stupid Shift key bug created by using lowercase - as a result the shift+num combination was broken
             var shift_nums = {
                 "`": "~",
                 "1": "!",
@@ -68,7 +71,6 @@ shortcut = {
                 "/": "?",
                 "\\": "|"
             };
-            //Special Keys - and their codes
             var special_keys = {
                 'esc': 27,
                 'escape': 27,
@@ -138,7 +140,7 @@ shortcut = {
                 meta: {
                     wanted: false,
                     pressed: false
-                } //Meta is Mac specific
+                }
             };
 
             if (e.ctrlKey) modifiers.ctrl.pressed = true;
@@ -162,16 +164,16 @@ shortcut = {
                 } else if (k === 'meta') {
                     kp++;
                     modifiers.meta.wanted = true;
-                } else if (k.length > 1) { //If it is a special key
+                } else if (k.length > 1) {
                     if (special_keys[k] === code) kp++;
 
                 } else if (opt['keycode']) {
                     if (opt['keycode'] === code) kp++;
 
-                } else { //The special keys did not match
+                } else {
                     if (character === k) kp++;
                     else {
-                        if (shift_nums[character] && e.shiftKey) { //Stupid Shift key bug created by using lowercase
+                        if (shift_nums[character] && e.shiftKey) {
                             character = shift_nums[character];
                             if (character === k) kp++;
                         }
@@ -186,12 +188,10 @@ shortcut = {
                 modifiers.meta.pressed === modifiers.meta.wanted) {
                 callback(e);
 
-                if (!opt['propagate']) { //Stop the event
-                    //e.cancelBubble is supported by IE - this will kill the bubbling process.
+                if (!opt['propagate']) {
                     e.cancelBubble = true;
                     e.returnValue = false;
 
-                    //e.stopPropagation works in Firefox.
                     if (e.stopPropagation) {
                         e.stopPropagation();
                         e.preventDefault();
@@ -205,13 +205,11 @@ shortcut = {
             'target': ele,
             'event': opt['type']
         };
-        //Attach the function with the event
         if (ele.addEventListener) ele.addEventListener(opt['type'], func, false);
         else if (ele.attachEvent) ele.attachEvent('on' + opt['type'], func);
         else ele['on' + opt['type']] = func;
     },
 
-    //Remove the shortcut - just specify the shortcut and I will remove the binding
     'remove': function (shortcut_combination) {
         shortcut_combination = shortcut_combination.toLowerCase();
         var binding = this.all_shortcuts[shortcut_combination];

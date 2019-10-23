@@ -27,6 +27,7 @@ module.exports.update_admin=function (controller,list,fn) {
  * @param fn
  */
 module.exports.delete_user=function (controller,list,fn) {
+    console.log("controller :"+controller,list)
     if (Controller.Admin.DeleteUser===controller) {
         db.deleteUser(Mongodb.table.tbUser,list,function (err,res) {
             fn(err,res)
