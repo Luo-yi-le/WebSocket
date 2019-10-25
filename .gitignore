@@ -9,6 +9,7 @@
 /config/*.js
 /config/*.*.map
 /resource/css/*.css
+*.css
 *.log
 *.*.log
 *.*.*.log

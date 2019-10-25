@@ -28,8 +28,18 @@ var db = require("../../../SQL/mongodb/db");
  * @param fun
  */
 module.exports.selectUserInfo_user=function (controller,list,fun) {
-     if (Controller.User.GetAllOrOne === controller) {
-        db.login(Mongodb.table.tbUser, list, function (err, res) {
+
+    var data="";
+    if (list=="{}"||list==undefined||list==""){
+       data=list;
+    } else{
+        data={
+            UName:{$regex:list.UName},
+            ULoginId:{$regex:list.ULoginId}
+        };
+    }
+    if (Controller.User.GetAllOrOne === controller) {
+        db.login(Mongodb.table.tbUser, data, function (err, res) {
             fun(err, res)
         });
     }

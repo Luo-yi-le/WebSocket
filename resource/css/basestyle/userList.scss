@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.userList-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .actionZone {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: pxToRem(10);
+
+    .search-name{
+      width: pxToRem(400);
+      font-size: pxToRem(24);
+    }
+    .search-loginid{
+      width: pxToRem(400);
+      font-size: pxToRem(24);
+    }
+  }
+}

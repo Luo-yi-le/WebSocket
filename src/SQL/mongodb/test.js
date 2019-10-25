@@ -12,10 +12,10 @@ var Controller =require( "../../../config/Controller").Controller;
 // log4js.configure((dirname.dirname()+'/log4js.json'));
 
 //查询l
-var getallorone1=Controller.User.GetAllOrOne
-db.GetAllOrOne(tbUser,{},function (err,data) {
-    console.log(data)
-});
+// var getallorone1=Controller.User.GetAllOrOne
+// db.GetAllOrOne(tbUser,{},function (err,data) {
+//     console.log(data)
+// });
 
 //登陆
 // var whereStr = {"ALoginID":'zhangsan',"APassWord":"123456"};
@@ -38,7 +38,10 @@ db.GetAllOrOne(tbUser,{},function (err,data) {
 //     console.logs(tip)
 // });
 
-
-
+//添加
+var list={"ULoginId":'wangwu',"UPassWord":"123456","UName":"王五","Image":"wangwu.png"};
+db.registerUser(tbUser,list,function (err ,res,tip) {
+    console.log(res,tip)
+});
 
 

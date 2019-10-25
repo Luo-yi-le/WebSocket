@@ -1,5 +1,6 @@
 import * as con from "../../../modules/config.js";
-let fig=con.config;
+import * as load from "../../../modules/loading.js";
+let fig = con.config;
 var ws;
 ws = new ReconnectingWebSocket(fig.url._ws1);
 ws.timeoutInterval = fig.number.thousand * 3;
@@ -11,7 +12,7 @@ var vm = new Vue({
     data: function () {
         return {
             userList: [],
-            userData:[],
+            userData: [],
             showBorder: true,
             showStripe: true,
             showHeader: true,
@@ -20,10 +21,11 @@ var vm = new Vue({
             fixedHeader: false,
             tableSize: 'default',
             updateInfo: "update",
-            pageSize:10,
-            dataCount:fig.userFig.$dataCount,
-            pageArr:fig.userFig.$pageArr
-
+            pageSize: 10,
+            dataCount: fig.userFig.$dataCount,
+            pageArr: fig.userFig.$pageArr,
+            dataName: "",
+            dataLoginId: ""
         }
     },
     computed: {
@@ -34,7 +36,7 @@ var vm = new Vue({
                     type: 'selection',
                     width: 60,
                     align: 'center',
-                    resizable:true
+                    resizable: true
                 })
             }
             if (this.showIndex) {
@@ -42,7 +44,7 @@ var vm = new Vue({
                     type: 'index',
                     width: 60,
                     align: 'center',
-                    resizable:true
+                    resizable: true
                 })
             }
             columns.push({
@@ -50,20 +52,20 @@ var vm = new Vue({
                 key: 'UId',
                 sortable: true,
                 align: 'center',
-                resizable:true
+                resizable: true
             });
             columns.push({
                 title: '用户名',
                 key: 'UName',
                 sortable: true,
                 align: 'center',
-                resizable:true
+                resizable: true
             });
             columns.push({
                 title: '账号',
                 key: 'ULoginId',
                 align: 'center',
-                resizable:true
+                resizable: true
             });
             // columns.push({
             // 	title: 'Age',
@@ -91,7 +93,7 @@ var vm = new Vue({
                 title: '头像',
                 key: 'Image',
                 align: 'center',
-                resizable:true,
+                resizable: true,
                 filters: [
                     {
                         label: 'z',
@@ -114,7 +116,7 @@ var vm = new Vue({
                 title: '操作',
                 width: 150,
                 align: 'center',
-                resizable:true,
+                resizable: true,
                 render: (h, params) => {
                     return h('div', [
                         h('i-button', {
@@ -150,7 +152,7 @@ var vm = new Vue({
     },
     methods: {
         show: function (h, name, item) {
-            const result = _.omit(item, ['_index', '_rowKey', '_id','UPassWord']);
+            const result = _.omit(item, ['_index', '_rowKey', '_id', 'UPassWord']);
             getResults(h, name, result);
         },
         remove: function (item) {
@@ -177,23 +179,37 @@ var vm = new Vue({
         },
         getAllUser: function () {
             var that = this;
+            load.loadingShow(that)
+            var obj = "";
+            if (that.dataName == "" && that.dataLoginId == "") {
+                obj = "{}";
+            } else {
+                obj = {
+                    UName: that.dataName,
+                    ULoginId: that.dataLoginId
+                }
+            }
             var data = {
                 Tag: "S",
                 Controller: "GetAllOrOne",
                 Role: "user",
                 param: {
-                    obj: "{}"
+                    obj: obj
                 }
             };
             ws.send(JSON.stringify(data));
             ws.onmessage = function (res) {
+                if (res !== ""){
+                    load.loadingHide(that);
+                }
+                load.loadingHide(that);
                 that.userList = JSON.parse(res.data);
-                that.dataCount=that.userList.length;
+                that.dataCount = that.userList.length;
 
-                if( JSON.parse(res.data).length<that.pageSize){
-                    that.userData=that.userList;
-                }else{
-                    that.userData=that.userList.slice(0,that.pageSize)
+                if (JSON.parse(res.data).length < that.pageSize) {
+                    that.userData = that.userList;
+                } else {
+                    that.userData = that.userList.slice(0, that.pageSize)
                 }
             };
 
@@ -208,18 +224,18 @@ var vm = new Vue({
                 that.getAllUser();
             };
         },
-        createUser:function () {
+        createUser: function () {
             getResults("create", "", "");
         },
-        changepage:function (index) {
-            var that =this;
-            var  start=(index-1) *that.pageSize;
-            var end=index*that.pageSize;
-            that.userData=that.userList.slice(start,end);
+        changepage: function (index) {
+            var that = this;
+            var start = (index - 1) * that.pageSize;
+            var end = index * that.pageSize;
+            that.userData = that.userList.slice(start, end);
         },
-        changePageSize:function (pageSize) {
-            var that =this;
-            that.pageSize=pageSize;
+        changePageSize: function (pageSize) {
+            var that = this;
+            that.pageSize = pageSize;
             that.changepage(1);
             this.$emit('on-page-size-change', pageSize);
         }

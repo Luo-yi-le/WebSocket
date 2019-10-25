@@ -7,8 +7,14 @@
 $icoImage:"http://192.168.60.107:8080/img/ico/";
 $userImage:"http://192.168.60.107:8080/img/user/";
 
+.loading{
+  animation: ani-demo-spin 1s linear infinite;
+  font-size: pxToRem(35);
+}
+
 @import "basestyle/base";
 @import "basestyle/index";
 @import "basestyle/login";
 @import "basestyle/default";
 @import "basestyle/modal";
+@import "basestyle/userList";

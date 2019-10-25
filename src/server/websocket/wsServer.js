@@ -32,7 +32,6 @@ var wsServer = ws.createServer(function (conn,res) {
 
         //控制器
         var Controller = data.Controller.toLowerCase();
-        console.log(Controller)
         //循环权限
         switch (Role) {
             //判断管理员
@@ -69,17 +68,14 @@ var wsServer = ws.createServer(function (conn,res) {
                 }
                 break;
 
-
             //判断用户
             case Tips.Setting.Role.User:
 
                 //循环User传来的Tag
                 switch (Tag) {
-
                     //用户登陆
                     case WebSocket.Tag.User.L:
                         userQ.userLoginController(Controller, data.param.obj, function (err, res) {
-
                             conn.sendText(JSON.stringify(res))
                         });
                         break;

@@ -20,9 +20,11 @@ export const config = {
         $dataCount: 0
     },
     loginFig: {
+        admin:"管理员",
+        user:"普通用户",
         A_LoginID: "ALoginID",
         A_PassWord: "APassWord",
-        U_LoginID: "ULoginID",
+        U_LoginID: "ULoginId",
         U_PassWord: "UPassWord",
         loginId_null: "账号不能为空",
         password_null: "密码不能为空",

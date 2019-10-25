@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+@function pxToRem($px){
+  @return ($px / 1080 * 750) / 35 * 1rem;
+}
+$endImage:"http://192.168.60.107:8080/img/end/";
+@import "portrait/index";
