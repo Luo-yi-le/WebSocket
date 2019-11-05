@@ -17,7 +17,8 @@ var vm = new Vue({
             },
             loginViewModel: {
                 userName: "zhangsan",
-                password: "123456"
+                password: "123456",
+                email: "2318927272@qq.com"
             },
             radioVal: fig.loginFig.admin,
             radioAdmin: fig.loginFig.admin,
@@ -25,31 +26,32 @@ var vm = new Vue({
             role: "admin",
             tag: "A",
             loginID: fig.loginFig.A_LoginID,
-            loginPad:  fig.loginFig.A_PassWord,
-
+            loginPad: fig.loginFig.A_PassWord,
+            forget: false,
+            loading :true,
         }
     },
     methods: {
         changeModel: function (value) {
-            var that=this;
+            var that = this;
             if (value == fig.loginFig.admin) {
                 that.role = "admin";
                 that.tag = "A";
                 that.loginID = fig.loginFig.A_LoginID;
-                that.loginPad =fig.loginFig.A_PassWord;
+                that.loginPad = fig.loginFig.A_PassWord;
 
                 //模拟账号
-                that.loginViewModel.userName="zhangsan";
-                that.loginViewModel.password="123456";
-            } else if (value ==fig.loginFig.user) {
+                that.loginViewModel.userName = "zhangsan";
+                that.loginViewModel.password = "123456";
+            } else if (value == fig.loginFig.user) {
                 that.role = "user";
                 that.tag = "L";
                 that.loginID = fig.loginFig.U_LoginID;
-                that.loginPad =fig.loginFig.U_PassWord;
+                that.loginPad = fig.loginFig.U_PassWord;
 
                 //模拟账号
-                that.loginViewModel.userName="lisi13";
-                that.loginViewModel.password="12345";
+                that.loginViewModel.userName = "lisi13";
+                that.loginViewModel.password = "12345";
             }
         },
         handleLogin: function () {
@@ -69,7 +71,7 @@ var vm = new Vue({
                 return;
             }
             var par = {
-               [that.loginID]: that.loginViewModel.userName,
+                [that.loginID]: that.loginViewModel.userName,
                 [that.loginPad]: that.loginViewModel.password
             };
             var data = {
@@ -100,11 +102,11 @@ var vm = new Vue({
             }, fig.number.thousand)
         },
         goHtml() {
-           var  html="";
-            if(this.role=="admin"){
-                html="index.html";
-            } else if(this.role=="user"){
-                html="user_page/index.html";
+            var html = "";
+            if (this.role == "admin") {
+                html = "index.html";
+            } else if (this.role == "user") {
+                html = "user_page/index.html";
             }
             setTimeout(() => {
                 window.location.href = html;
@@ -138,8 +140,45 @@ var vm = new Vue({
                     console.log(res, "success")
                 }
             })
-        }
+        },
+        forgetPwd:function () {
+            const that = this;
+            var str= /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/;
+            if (str.test(that.loginViewModel.email)) {
+                var  par = {
+                    [that.loginID]: that.loginViewModel.userName,
+                    Email: that.loginViewModel.email
+                };
 
+            var data = {
+                Tag: "F",
+                Controller: "forgetpass",
+                Role: that.role,
+                param: {
+                    obj: par
+                }
+            };
+            ws.send(JSON.stringify(data));
+            ws.onmessage = function (res) {
+                console.log(res.data)
+                if (res.data=="[]"){
+                    that.$Message.error("请确认账号、邮箱是否正确");
+                    that.loading =true;
+                }else{
+                    that.$Message.success("密码已发送，请注意查看邮箱");
+                    that.forget = false;
+                }
+            };
+
+            }else{
+                that.$Message.error("邮箱格式错误");
+                that.loading =true;
+                return;
+            }
+            // setTimeout(() => {
+            //
+            // }, 5000)
+        }
     },
     created() {
         this.enterClick();

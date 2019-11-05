@@ -102,41 +102,68 @@
 
   .account-form {
     padding: pxToRem(15);
+
+
+    .form-group {
+      width: 100%;
+      margin-bottom: pxToRem(15);
+
+
+      label {
+        width: 100%;
+        font-size: pxToRem(21);
+        display: block;
+      }
+
+      input {
+        border: pxToRem(1) solid #ccc;
+        line-height: pxToRem(28);
+        font-size: pxToRem(19);
+        padding: pxToRem(2) 0;
+        padding-left: pxToRem(5);
+        display: block;
+        width: 100%;
+        margin-top: pxToRem(5);
+        height: pxToRem(44);
+      }
+      .for-reg{
+        display: flex;
+        position: absolute;
+        right: pxToRem(20);
+        .forget{
+          margin: pxToRem(10);
+          font: pxToRem(23);
+        }
+        .register{
+          margin: pxToRem(10);
+          font: pxToRem(23);
+        }
+        .vertical-center-modal{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .ivu-modal{
+            top: 0;
+          }
+        }
+      }
+
+    }
   }
 
-  .account-form .form-group {
-    width: 100%;
-    margin-bottom:  pxToRem(15);
-  }
 
-  .account-form .form-group label {
-    width: 100%;
-    font-size: pxToRem(21);
-    display: block;
-  }
-
-  .account-form .form-group input {
-    border:  pxToRem(1) solid #ccc;
-    line-height:  pxToRem(28);
-    font-size:  pxToRem(19);
-    padding:  pxToRem(2) 0;
-    padding-left: pxToRem(5);
-    display: block;
-    width: 100%;
-    margin-top: pxToRem(5);
-    height: pxToRem(44);
-  }
   .account-form #btn_login {
     background: #3b78e7;
     color: #fff;
     font-size: pxToRem(18);
     font-weight: bold;
-    padding:pxToRem(8) pxToRem(25);
+    padding: pxToRem(8) pxToRem(25);
     cursor: pointer;
     margin-top: pxToRem(15);
     display: inline-block;
     box-shadow: 0 pxToRem(2) pxToRem(2) 0 rgba(0, 0, 0, 0.14), 0 pxToRem(3) pxToRem(1) pxToRem(-2) rgba(0, 0, 0, 0.12), 0 pxToRem(1) pxToRem(5) 0 rgba(0, 0, 0, 0.2);
-    border-radius:pxToRem(3);
+    border-radius: pxToRem(3);
     min-width: pxToRem(100);
     text-align: center;
   }

@@ -46,7 +46,6 @@ module.exports.GetAllOrOne = function (table, obj, callback) {
  * @param callback
  */
 module.exports.login = function (table, obj, callback) {
-    console.log(obj);
     if (obj === undefined || obj === "" || obj == null || obj === {}) {
         return Tips.Setting.Tip.tip1;
     } else {
@@ -106,8 +105,8 @@ module.exports.registerUser =  function (table, obj, callback) {
             if (id != null) {
                 var obj1=[obj].map(function (items) {
                     return {
-                        ...items,
-                        UId: id+1
+                        UId: id+1,
+                        ...items
                     }
                 });
                resolve(obj1);
@@ -144,6 +143,20 @@ var lastOne =  function (table, obj, callback) {
         db.collection(table).find(obj).sort({"_id": -1}).limit(1).toArray(function (err, res) {
             callback(err, res[0].UId)
 
+        })
+    })
+};
+
+//忘记密码
+module.exports.forget=function (table, obj, callback) {
+    // console.log(obj.Email);
+    var param={
+        ULoginId:obj.ULoginId,
+        Email:obj.Email,
+    };
+    _connect(function (db) {
+        db.collection(table).find(param).toArray(function (err, res) {
+            callback(err, res, Tips.Setting.Success["201"]);
         })
     })
 };

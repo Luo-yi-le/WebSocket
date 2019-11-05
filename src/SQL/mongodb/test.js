@@ -5,6 +5,8 @@ var Tips=require("../../../config/zh-Ch");
 var tbUser = "dbo.tbUser";
 var tbAdmin = "dbo.tbAdmin";
 var Controller =require( "../../../config/Controller").Controller;
+
+var mail=require("../../email/nodemailer");
 // var dirname=require("../../assets/log4js/test_log")
 // console.log(dirname.dirname())
 
@@ -38,10 +40,18 @@ var Controller =require( "../../../config/Controller").Controller;
 //     console.logs(tip)
 // });
 
-//添加
-var list={"ULoginId":'wangwu',"UPassWord":"123456","UName":"王五","Image":"wangwu.png"};
-db.registerUser(tbUser,list,function (err ,res,tip) {
-    console.log(res,tip)
-});
+// //添加
+// var list={"ULoginId":'wangwu',"UPassWord":"123456","UName":"王五","Image":"wangwu.png"};
+// db.registerUser(tbUser,list,function (err ,res,tip) {
+//
+// });
 
+//1783913526@qq.com
+var list={"ULoginId":'hemm',"Email":"316373083@qq.com"};
+db.forget(tbUser,list,function (err,res,tip) {
+    if (res.length>0){
+        mail.emaileFun(res);
+        console.log(res)
+    }
+});
 

@@ -35,7 +35,7 @@ class Server{
             let statObj = await stat(p);
             if (statObj.isDirectory()) {
                 // 读取当前访问的目录下的所有内容 readdir 数组 把数组渲染回页面
-                res.setHeader('Content-Type', 'text/html;charset=utf8')
+                res.setHeader('Content-Type', 'text/html;charset=utf8');
                 let dirs = await readdir(p);
                 dirs = dirs.map(item=>({
                     name:item,

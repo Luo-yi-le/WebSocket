@@ -11,6 +11,6 @@ export const Controller = {
         "Login": "login",
         "GetAllOrOne": "getallorone",
         "UpdateUser": "UpdateUser",
-
+        "ForgetPwd":"forgetpass"
     },
 }

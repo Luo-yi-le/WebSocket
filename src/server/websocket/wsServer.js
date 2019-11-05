@@ -9,7 +9,8 @@ var WebSocket = require("../../../config/WebSocket").WebSocket;
 
 //日志
 var log = require("../../assets/log4js/log4js");
-
+//邮箱
+var mail=require("../../email/nodemailer");
 /**
  * @创建端口号
  * @type {string}
@@ -17,14 +18,14 @@ var log = require("../../assets/log4js/log4js");
 var PORT = WebSocket.wsDrive.Port, HOST = WebSocket.wsDrive.Host;
 
 
-var wsServer = ws.createServer(function (conn,res) {
+var wsServer = ws.createServer(function (conn, res) {
     console.log(Tips.Setting.Success["204"]);
     conn.on(WebSocket.wsDrive.Text, function (str) {
 
         //前端传来的数据
         var data = JSON.parse(str);
 
-        //用户权限 admin || user
+        //用户权限 admin || image
         var Role = data.Role.toLowerCase();
 
         //状态码
@@ -46,19 +47,19 @@ var wsServer = ws.createServer(function (conn,res) {
                         break;
                     //管理员查询用户所有信息
                     case  WebSocket.Tag.Admin.S:
-                        adminQ.selectUserInfo_admin(Controller,data.param.obj, function (err, res) {
+                        adminQ.selectUserInfo_admin(Controller, data.param.obj, function (err, res) {
                             conn.sendText(JSON.stringify(res))
                         });
                         break;
                     //管理员修改
                     case WebSocket.Tag.Admin.U:
-                        adminA.update_admin(Controller,data.param.obj, function (err, res) {
+                        adminA.update_admin(Controller, data.param.obj, function (err, res) {
                             conn.sendText(JSON.stringify(res))
                         });
                         break;
                     case WebSocket.Tag.Admin.D:
-                        console.log("res :",Controller,data.param.obj);
-                        adminA.delete_user(Controller,data.param.obj, function (err, res) {
+                        console.log("res :", Controller, data.param.obj);
+                        adminA.delete_user(Controller, data.param.obj, function (err, res) {
 
                             conn.sendText(JSON.stringify(res))
                         });
@@ -87,11 +88,19 @@ var wsServer = ws.createServer(function (conn,res) {
                         break;
                     //用户修改
                     case WebSocket.Tag.User.U:
-                        userA.update_user(Controller.data.param.obj, function (err, res) {
+                        userA.update_user(Controller,data.param.obj, function (err, res) {
                             conn.sendText(JSON.stringify(res))
                         });
                         break;
-
+                    //忘记密码
+                    case WebSocket.Tag.User.F:
+                        userA.ForgetPwd(Controller,data.param.obj,function (err,res) {
+                            if (res!=""){
+                                mail.emaileFun(res);
+                            }
+                            conn.sendText(JSON.stringify(res))
+                        });
+                        break;
                     default:
                         break;
                 }
@@ -105,12 +114,12 @@ var wsServer = ws.createServer(function (conn,res) {
     });
 
     conn.on(WebSocket.wsDrive.Close, function (code, reason) {
-        var logger = log.log.getLogger("["+"WebSocket："+WebSocket.wsDrive.Close+"]");
+        var logger = log.log.getLogger("[" + "WebSocket：" + WebSocket.wsDrive.Close + "]");
         logger.off(Tips.Setting.Close.c1001);
     });
     conn.on(WebSocket.wsDrive.Error, function (err, reason) {
-        var logger = log.log.getLogger("["+"WebSocket："+WebSocket.wsDrive.Error+"]");
-        logger.error(Tips.Setting.Error["419"],err.code);
+        var logger = log.log.getLogger("[" + "WebSocket：" + WebSocket.wsDrive.Error + "]");
+        logger.error(Tips.Setting.Error["419"], err.code);
     });
     conn.on(WebSocket.wsDrive.Message, function (msg) {
         console.log(msg)

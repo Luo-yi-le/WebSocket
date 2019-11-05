@@ -104,7 +104,7 @@
                 setTimeout(function () {
                     var token = localStorage.getItem("dnc_token");
                     if (!token) return;
-                    var data_image = '[data-user="user-image"]';
+                    var data_image = '[data-image="image-image"]';
 
                     if (JSON.parse(token)[0].Image === "" || JSON.parse(token)[0].Image === null) {
                         return;

@@ -20,3 +20,18 @@ module.exports.update_user=function (controller,list,fn) {
         });
     }
 };
+
+/**
+ * 忘记密码
+ * @param controller
+ * @param list
+ * @param fn
+ * @constructor
+ */
+module.exports.ForgetPwd=function (controller,list,fn) {
+    if(Controller.User.ForgetPwd===controller){
+        db.forget(Mongodb.table.tbUser,list,function (err,res) {
+            fn(err, res)
+        })
+    }
+};

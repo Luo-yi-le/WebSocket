@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f00596b1-0049-47c1-b7a9-9874d6ec63e5" name="Default Changelist" comment="添加nginx代理服务器和PM2进程管理器">
-      <change afterPath="$PROJECT_DIR$/resource/css/basestyle/userList.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/css/frontEnd/landscape.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/css/frontEnd/landscape/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/modules/loading.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="f00596b1-0049-47c1-b7a9-9874d6ec63e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/tools/tools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/email/nodemailer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server/httpServer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resource/css/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/Controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/Controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/WebSocket.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/WebSocket.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/css/basestyle/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resource/css/basestyle/login.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource/js/source/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/resource/js/source/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/js/source/user/userList.js" beforeDir="false" afterPath="$PROJECT_DIR$/resource/js/source/user/userList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/modules/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/resource/modules/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/modules/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/resource/modules/global.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SQL/mongodb/db.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SQL/mongodb/db.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SQL/mongodb/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SQL/mongodb/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/controller/user/queryUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/controller/user/queryUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SQL/mySqlH/test_mysql.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/SQL/mySqlH/test_mysql.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/controller/user/actionUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/controller/user/actionUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/launch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/launch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server/srcServer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/srcServer/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server/websocket/wsServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server/websocket/wsServer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,55 +38,66 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resource/js/source/login.js">
+        <entry file="file://$PROJECT_DIR$/src/server/srcServer/config.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server/srcServer/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            <state relative-caret-position="3175">
+              <caret line="127" column="37" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resource/css/frontEnd/landscape.scss">
+        <entry file="file://$PROJECT_DIR$/src/server/ImgServer/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="6" selection-end-column="26" />
+            <state relative-caret-position="200">
+              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/www.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1125">
+              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SQL/mongodb/db.js">
+        <entry file="file://$PROJECT_DIR$/src/server/ImgServer/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="120" column="12" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
+            <state relative-caret-position="34">
+              <caret line="27" column="61" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="61" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SQL/mongodb/test.js">
+        <entry file="file://$PROJECT_DIR$/src/server/ImgServer/mime.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resource/css/frontEnd/portrait.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/WebSocket.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            <state relative-caret-position="375">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -93,33 +108,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="TypeScript File" />
         <option value="HTTP Request" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>8</find>
-      <find>Enter</find>
-      <find>toLowerCase</find>
-      <find>ReconnectingWebSocket</find>
-      <find>menu</find>
-      <find>def</find>
-      <find>if-modified-since</find>
-      <find>readFileSync</find>
-      <find>cache</find>
-      <find>iisnode</find>
-      <find>log</find>
-      <find>px</find>
-      <find>sider-logo</find>
-      <find>form-group</find>
-      <find>goHtem</find>
-      <find>time</find>
-      <find>isCollapsed</find>
-      <find>span</find>
       <find>ip</find>
       <find>name: 'src_Server',</find>
       <find>menu-item</find>
@@ -132,7 +129,28 @@
       <find>tableSize</find>
       <find>fig</find>
       <find>console</find>
+      <find>forget</find>
+      <find>form-group</find>
+      <find>query</find>
+      <find>getIpInfo</find>
+      <find>getIp</find>
+      <find>strCharList</find>
+      <find>formidable</find>
+      <find>jssha</find>
+      <find>cons</find>
+      <find>fs</find>
+      <find>img</find>
+      <find>filePath</find>
+      <find>pathName</find>
+      <find>extName</find>
+      <find>url</find>
+      <find>则列出目录</find>
+      <find>images</find>
+      <find>getRemoteImg</find>
     </findStrings>
+    <dirStrings>
+      <dir>D:\workingPaper\WebStorm\websocket_sys\src\server\ImgServer</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -149,35 +167,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pm2_app.json" />
-        <option value="$PROJECT_DIR$/ecosystem.config.js" />
-        <option value="$PROJECT_DIR$/resource/js/lib/jsmpeg.min.js" />
-        <option value="$PROJECT_DIR$/resource/js/lib/keyboard/keyboard_shortcuts.js" />
-        <option value="$PROJECT_DIR$/src/server/websocket/htmlServer.ts" />
-        <option value="$PROJECT_DIR$/config/zh-Ch.ts" />
-        <option value="$PROJECT_DIR$/resource/json/user/userList.json" />
-        <option value="$PROJECT_DIR$/src/common/controller/user/actionUser.js" />
-        <option value="$PROJECT_DIR$/config/Controller.ts" />
-        <option value="$PROJECT_DIR$/src/common/controller/admin/actionAdminr.js" />
-        <option value="$PROJECT_DIR$/resource/css/basestyle/index.scss" />
-        <option value="$PROJECT_DIR$/resource/modules/BaseShell.ts" />
-        <option value="$PROJECT_DIR$/resource/modules/BaseShellInit.ts" />
-        <option value="$PROJECT_DIR$/resource/js/lib/md5.min.js" />
-        <option value="$PROJECT_DIR$/public/BaseShell.js" />
-        <option value="$PROJECT_DIR$/public/BaseShell.ts" />
-        <option value="$PROJECT_DIR$/resource/modules/BaseSehll.js" />
-        <option value="$PROJECT_DIR$/resource/modules/BaseShell.js" />
-        <option value="$PROJECT_DIR$/resource/modules/baseShell.js" />
-        <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/resource/modules/global.js" />
         <option value="$PROJECT_DIR$/resource/modules/baseShellInit_new.js" />
         <option value="$PROJECT_DIR$/resource/css/basestyle/base.scss" />
         <option value="$PROJECT_DIR$/src/assets/log4js/logs/all.2019-10-07.log" />
         <option value="$PROJECT_DIR$/resource/css/basestyle/modal.scss" />
         <option value="$PROJECT_DIR$/resource/modules/app.config" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/resource/modules/baseShellInit.js" />
-        <option value="$PROJECT_DIR$/src/server/launch.js" />
         <option value="$PROJECT_DIR$/resource/json/menu/Menu_sotl.json" />
         <option value="$PROJECT_DIR$/resource/js/source/fontSizeloading.js" />
         <option value="$PROJECT_DIR$/resource/js/source/fontLoading.js" />
@@ -188,10 +184,7 @@
         <option value="$PROJECT_DIR$/src/common/controller/user/queryUser.js" />
         <option value="$PROJECT_DIR$/resource/modules/loading.js" />
         <option value="$PROJECT_DIR$/resource/css/style.scss" />
-        <option value="$PROJECT_DIR$/src/server/websocket/wsServer.js" />
-        <option value="$PROJECT_DIR$/config/WebSocket.ts" />
         <option value="$PROJECT_DIR$/resource/modules/config.js" />
-        <option value="$PROJECT_DIR$/resource/js/source/login.js" />
         <option value="$PROJECT_DIR$/resource/css/frontEnd/frontEndStyle.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/resource/css/frontEnd/frontEndStyle.scss" />
@@ -199,7 +192,32 @@
         <option value="$PROJECT_DIR$/resource/css/frontEnd/portrait.scss" />
         <option value="$PROJECT_DIR$/resource/css/frontEnd/portrait/index.scss" />
         <option value="$PROJECT_DIR$/src/SQL/mongodb/test.js" />
+        <option value="$PROJECT_DIR$/resource/css/basestyle/login.scss" />
+        <option value="$PROJECT_DIR$/config/WebSocket.ts" />
+        <option value="$PROJECT_DIR$/config/Controller.ts" />
+        <option value="$PROJECT_DIR$/src/common/controller/user/actionUser.js" />
         <option value="$PROJECT_DIR$/src/SQL/mongodb/db.js" />
+        <option value="$PROJECT_DIR$/resource/js/source/login.js" />
+        <option value="$PROJECT_DIR$/src/server/websocket/wsServer.js" />
+        <option value="$PROJECT_DIR$/src/server/launch.js" />
+        <option value="$PROJECT_DIR$/src/email/nodemailer.js" />
+        <option value="$PROJECT_DIR$/src/server/httpServer.js" />
+        <option value="$PROJECT_DIR$/src/assets/tools/tools.js" />
+        <option value="$PROJECT_DIR$/src/server/ImgServer/example.js" />
+        <option value="$PROJECT_DIR$/src/server/ImgServer/index.js" />
+        <option value="$PROJECT_DIR$/src/server/ImgServer/requestHandlers.js" />
+        <option value="$PROJECT_DIR$/src/server/ImgServer/config.js" />
+        <option value="$PROJECT_DIR$/src/server/ImgServer/img.js" />
+        <option value="$PROJECT_DIR$/src/server/ImgServer/mime.js" />
+        <option value="$PROJECT_DIR$/src/server/ImgServer/img/11.html" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/server/ImgServer/Step.js" />
+        <option value="$PROJECT_DIR$/src/server/ImgServer/app.js" />
+        <option value="$PROJECT_DIR$/src/server/srcServer/index.js" />
+        <option value="$PROJECT_DIR$/src/server/ImgServer/1/Step.js" />
+        <option value="$PROJECT_DIR$/src/server/ImgServer/1/s.js" />
+        <option value="$PROJECT_DIR$/imgS/image/img/index.html" />
+        <option value="$PROJECT_DIR$/src/server/ImgServer/server.js" />
       </list>
     </option>
   </component>
@@ -215,66 +233,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="log4js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="log4js" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SQL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="SQL" type="462c0819:PsiDirectoryNode" />
-              <item name="mongodb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -301,6 +259,62 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
+              <item name="imgS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
+              <item name="imgS" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
+              <item name="imgS" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="websocket_sys" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="ImgServer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="websocket_sys" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -308,7 +322,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resource/css/frontEnd/portrait" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/imgS/image/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -322,6 +336,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="D:\workingPaper\WebStorm\websocket_sys\node_modules\typescript\lib" />
   </component>
@@ -334,11 +349,11 @@
       <recent name="D:\workingPaper\WebStorm\websocket_sys\resource\js\lib" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workingPaper\WebStorm\websocket_sys\imgS\image\img" />
+      <recent name="D:\workingPaper\WebStorm\websocket_sys\imgS" />
+      <recent name="D:\workingPaper\WebStorm\websocket_sys\imgS\userImg" />
       <recent name="D:\workingPaper\WebStorm\websocket_sys\resource\css\frontEnd\portrait" />
       <recent name="D:\workingPaper\WebStorm\websocket_sys\resource\img\end" />
-      <recent name="D:\workingPaper\WebStorm\websocket_sys\resource\modules" />
-      <recent name="D:\workingPaper\WebStorm\websocket_sys\resource\img\ico" />
-      <recent name="D:\workingPaper\WebStorm\websocket_sys\resource\img\user" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -353,31 +368,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.db.js">
-    <configuration name="db.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="db.js" working-dir="$PROJECT_DIR$/src/SQL/mongodb">
+  <component name="RunManager" selected="Node.js.app.js">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="app.js" working-dir="$PROJECT_DIR$/src/server/ImgServer">
       <method v="2" />
     </configuration>
-    <configuration name="test.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="test.js" working-dir="$PROJECT_DIR$/src/SQL/mongodb">
+    <configuration name="launch.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="launch.js" working-dir="$PROJECT_DIR$/src/server">
       <method v="2" />
     </configuration>
-    <configuration name="pm2_stopAll" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="pm2_stopAll" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+    <configuration name="s.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="s.js" working-dir="$PROJECT_DIR$/src/server/ImgServer/1">
       <method v="2" />
     </configuration>
-    <configuration name="run-server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="run-server" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+    <configuration name="tools.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="tools.js" working-dir="$PROJECT_DIR$/src/assets/tools">
       <method v="2" />
     </configuration>
     <configuration name="src-server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -392,11 +393,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.test.js" />
-        <item itemvalue="Node.js.db.js" />
-        <item itemvalue="npm.run-server" />
+        <item itemvalue="Node.js.app.js" />
+        <item itemvalue="Node.js.s.js" />
+        <item itemvalue="Node.js.launch.js" />
         <item itemvalue="npm.src-server" />
-        <item itemvalue="npm.pm2_stopAll" />
+        <item itemvalue="Node.js.tools.js" />
       </list>
     </recent_temporary>
   </component>
@@ -458,7 +459,15 @@
       <workItem from="1571624617270" duration="3602000" />
       <workItem from="1571815031570" duration="6687000" />
       <workItem from="1571881156980" duration="11803000" />
-      <workItem from="1571971515761" duration="15043000" />
+      <workItem from="1571971515761" duration="15214000" />
+      <workItem from="1572229603679" duration="1782000" />
+      <workItem from="1572248524864" duration="7509000" />
+      <workItem from="1572315316164" duration="3700000" />
+      <workItem from="1572332076608" duration="4850000" />
+      <workItem from="1572399477795" duration="7710000" />
+      <workItem from="1572512870933" duration="3206000" />
+      <workItem from="1572570373052" duration="6132000" />
+      <workItem from="1572833308608" duration="4972000" />
     </task>
     <task id="LOCAL-00001" summary="WebSocket+MongoDB+NodeJs">
       <created>1563498328493</created>
@@ -523,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569573060932</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="使用promise 完成两个异步请求">
+      <created>1571997895149</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571997895149</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -559,7 +575,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412783000" />
+    <option name="totallyTimeSpent" value="452815000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -572,15 +588,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6775956" visible="true" weight="0.12170706" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.667382" visible="true" weight="0.12170706" />
       <window_info id="Structure" order="1" sideWeight="0.2877292" side_tool="true" weight="0.15437302" />
-      <window_info id="npm" order="2" sideWeight="0.32240438" side_tool="true" visible="true" weight="0.12170706" />
+      <window_info id="npm" order="2" sideWeight="0.33261803" side_tool="true" visible="true" weight="0.12170706" />
       <window_info id="Favorites" order="3" sideWeight="0.28005657" side_tool="true" weight="0.15437302" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49947312" weight="0.32504147" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5642782" visible="true" weight="0.4109442" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49947312" weight="0.32403433" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5642782" weight="0.20922747" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31759655" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -588,7 +603,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49841937" weight="0.32939914" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.4357218" side_tool="true" weight="0.4248927" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49578503" weight="0.32618025" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49578503" weight="0.30364805" />
       <window_info anchor="bottom" id="TypeScript" order="11" sideWeight="0.49894625" weight="0.32939914" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -627,235 +642,16 @@
     <MESSAGE value="使用scss样式 将页面重新布局，将服务器改为本机ip 不用127.0.0.1" />
     <MESSAGE value="获取用户ip" />
     <MESSAGE value="添加nginx代理服务器和PM2进程管理器" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加nginx代理服务器和PM2进程管理器" />
+    <MESSAGE value="使用promise 完成两个异步请求" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用promise 完成两个异步请求" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resource/js/lib/jquery/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2924">
-          <caret line="3579" column="29" selection-start-line="3579" selection-start-column="29" selection-end-line="3579" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/modules/baseShellInit_new.js" />
-    <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/log4js/logs/all.2019-10-04.log" />
-    <entry file="file://$PROJECT_DIR$/src/assets/log4js/logs/all.2019-10-07.log" />
-    <entry file="file://$PROJECT_DIR$/config/WebSocket.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/modules/config_new.js" />
-    <entry file="file://$PROJECT_DIR$/resource/css/basestyle/base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ecosystem.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" column="36" lean-forward="true" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/websocket/htmlServer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <folding>
-            <element signature="n#ws#0" expanded="true" />
-            <element signature="n#log#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="6" column="9" selection-start-line="6" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/launch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/modules/global.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="57" lean-forward="true" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/modules/baseShellInit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="49" column="40" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
-          <folding>
-            <element signature="n#!!block;n#getResults#0" />
-            <element signature="n#!!block;n#createElement#0" />
-            <element signature="n#!!block;n#createHead#0" />
-            <element signature="n#!!block;n#createBody#0" />
-            <element signature="n#!!block;n#createFooter#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/js/source/fontLoading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2254" selection-start-column="2254" selection-end-column="2254" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/js/source/fontSizeloading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/json/menu/Menu_sotl.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="67" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/log4js/logs/all.2019-10-21.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="400">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/css/basestyle/32.http" />
-    <entry file="file://$PROJECT_DIR$/resource/css/basestyle/modal.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/modules/loading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/js/source/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/js/source/user/userList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5025">
-          <caret line="202" column="43" selection-start-line="202" selection-start-column="43" selection-end-line="202" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/css/basestyle/userList.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/controller/user/queryUser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="919">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/controller/admin/queryAdmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/json/user/userList.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/websocket/wsServer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="76" column="45" lean-forward="true" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="45" />
-          <folding>
-            <element signature="e#1222#1473#0" />
-            <element signature="e#1528#1779#0" />
-            <element signature="e#1828#2070#0" />
-            <element signature="e#2091#2405#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7505">
-          <caret line="562" selection-start-line="562" selection-end-line="562" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/img/end/logo.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resource/css/frontEnd/landscape.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../../HBuilderX/moban2189/assets/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/modules/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="18" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resource/css/frontEnd/portrait.css">
@@ -868,38 +664,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resource/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/WebSocket.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resource/css/frontEnd/portrait/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/css/frontEnd/landscape.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/css/frontEnd/portrait.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -914,20 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="602" column="4" selection-start-line="602" selection-start-column="4" selection-end-line="602" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/js/source/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SQL/mongodb/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -951,10 +705,229 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resource/css/frontEnd/landscape.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="580" selection-start-line="580" selection-end-line="580" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/css/frontEnd/portrait.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/css/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/controller/user/actionUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SQL/mongodb/db.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="120" column="12" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="12" />
+        <state relative-caret-position="3725">
+          <caret line="149" column="6" lean-forward="true" selection-start-line="149" selection-start-column="6" selection-end-line="149" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/Controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/controller/user/queryUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/css/basestyle/login.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3700">
+          <caret line="148" column="9" selection-start-line="148" selection-start-column="9" selection-end-line="148" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/WebSocket.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/modules/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resource/js/source/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4575">
+          <caret line="183" column="8" selection-start-line="183" selection-start-column="8" selection-end-line="183" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/email/nodemailer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="19" column="124" selection-start-line="19" selection-start-column="124" selection-end-line="19" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/websocket/wsServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2425">
+          <caret line="97" column="39" selection-start-line="97" selection-start-column="39" selection-end-line="97" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/launch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/websocket/htmlServer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+          <folding>
+            <element signature="n#ws#0" expanded="true" />
+            <element signature="n#log#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SQL/mongodb/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1300">
+          <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/tools/tools.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/httpServer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="34" column="31" lean-forward="true" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/example.js" />
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/index.js" />
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/requestHandlers.js" />
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/config.js" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/10.16.0/node-typings/node_modules/@types/node/crypto.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/img/11.html" />
+    <entry file="file://$PROJECT_DIR$/imgS/userImg/11.html" />
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/Step.js" />
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/img.js" />
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/1/Step.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/step/lib/step.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="958">
+          <caret line="150" column="2" selection-start-line="150" selection-start-column="2" selection-end-line="150" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/1/s.js" />
+    <entry file="file://$PROJECT_DIR$/src/server/srcServer/config.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/srcServer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3175">
+          <caret line="127" column="37" selection-start-line="127" selection-start-column="37" selection-end-line="127" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/mime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imgS/image/img/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="21" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/ImgServer/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="27" column="61" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="61" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

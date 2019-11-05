@@ -31,6 +31,7 @@ export const WebSocket={
             "U": "u",
             "S": "s",
             "D":"d",
+            "F":"f",//忘记密码
         },
     },
 };
