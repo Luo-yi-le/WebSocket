@@ -14,6 +14,7 @@ module.exports .query =
             //开始数据操作
             //传入三个参数，第一个参数sql语句，第二个参数sql语句中需要的数据，第三个参数回调函数
             connection.query( sql, params, (err,results,fields )=>{
+                console.log(sql,params)
                 if(err){
                     console.log('数据操作失败');
                     throw err;
