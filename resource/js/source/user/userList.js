@@ -25,7 +25,9 @@ var vm = new Vue({
             dataCount: fig.userFig.$dataCount,
             pageArr: fig.userFig.$pageArr,
             dataName: "",
-            dataLoginId: ""
+            dataLoginId: "",
+            file:null,
+            action:"http://192.168.60.107:8089/image/getPicture?code=UserPic"
         }
     },
     computed: {
@@ -238,6 +240,9 @@ var vm = new Vue({
             that.pageSize = pageSize;
             that.changepage(1);
             this.$emit('on-page-size-change', pageSize);
+        },
+        handleBeforeUpload(file){
+            console.log(file)
         }
     },
     created() {

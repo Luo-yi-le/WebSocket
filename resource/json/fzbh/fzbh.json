@@ -1,0 +1,148 @@
+{
+    "result": {
+        "code": 1,
+        "data": [
+            {
+                "fzbh": "fzbh_1",
+                "sitename": "sitename_1",
+                "id": "id_1"
+            }
+        ],
+        "fzbh": [
+            "fzbh_1",
+            "fzbh_2",
+            "fzbh_3",
+            "fzbh_4",
+            "fzbh_5",
+            "fzbh_6"
+        ],
+        "Android": [
+            {
+                "fzbh": "fzbh_2",
+                "platform": "android",
+                "ver": "1.00",
+                "size": "12121",
+                "date": "2019-5-3",
+                "source": "",
+                "url": "https://www.baidu.com",
+                "forced": false
+            },
+            {
+                "fzbh": "fzbh_4",
+                "platform": "android",
+                "ver": "1.00",
+                "size": "12123",
+                "date": "2019-5-3",
+                "source": "",
+                "url": "https://www.baidu.com",
+                "forced": false
+            },
+            {
+                "fzbh": "fzbh_6",
+                "platform": "android",
+                "ver": "1.00",
+                "size": "12124",
+                "date": "2019-5-3",
+                "source": "",
+                "url": "https://www.baidu.com",
+                "forced": false
+            }
+        ],
+        "Ios": [
+            {
+                "fzbh": "fzbh_1",
+                "platform": "ios",
+                "ver": "1.00",
+                "size": "12125",
+                "date": "2019-5-3",
+                "source": "",
+                "url": "https://www.baidu.com",
+                "forced": false
+            },
+            {
+                "fzbh": "fzbh_3",
+                "platform": "ios",
+                "ver": "1.00",
+                "size": "1212",
+                "date": "2019-5-3",
+                "source": "",
+                "url": "https://www.baidu.com",
+                "forced": false
+            },
+            {
+                "fzbh": "fzbh_5",
+                "platform": "ios",
+                "ver": "1.00",
+                "size": "1212",
+                "date": "2019-5-3",
+                "source": "",
+                "url": "https://www.baidu.com",
+                "forced": false
+            }
+        ],
+        "AndroidOne": [
+            {
+                "fzbh": "fzbh_2",
+                "platform": "android",
+                "ver": "1.00",
+                "size": "12121",
+                "date": "2019-5-3",
+                "source": "",
+                "url": "https://www.baidu.com",
+                "forced": false
+            },{
+                "fzbh": "fzbh_4",
+                "platform": "android",
+                "ver": "1.00",
+                "size": "12121",
+                "date": "2019-5-3",
+                "source": "",
+                "url": "https://www.baidu.com",
+                "forced": false
+            }
+            ,{
+                "fzbh": "fzbh_6",
+                "platform": "android",
+                "ver": "1.00",
+                "size": "12121",
+                "date": "2019-5-3",
+                "source": "",
+                "url": "https://www.baidu.com",
+                "forced": false
+            }
+        ],
+        "IosOne": [
+            {
+                "fzbh": "fzbh_1",
+                "platform": "ios",
+                "ver": "1.00",
+                "size": "12121",
+                "date": "2019-5-3",
+                "source": "",
+                "url": "https://www.baidu.com",
+                "forced": false
+            },
+            {
+                "fzbh": "fzbh_3",
+                "platform": "ios",
+                "ver": "1.00",
+                "size": "12121",
+                "date": "2019-5-3",
+                "source": "",
+                "url": "https://www.baidu.com",
+                "forced": false
+            },
+            {
+                "fzbh": "fzbh_5",
+                "platform": "ios",
+                "ver": "1.00",
+                "size": "12121",
+                "date": "2019-5-3",
+                "source": "",
+                "url": "https://www.baidu.com",
+                "forced": false
+            }
+        ],
+        "type": "fzbh"
+    }
+}

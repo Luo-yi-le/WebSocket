@@ -13,7 +13,7 @@ for (var dev in ifaces) {
 }
 
 module.exports = {
-    port: 8080, // 默认端口
+    port: 9080, // 默认端口
     host: hostAddress[0], // 默认主机名
     dir: process.cwd(), // 默认读取目录
 }

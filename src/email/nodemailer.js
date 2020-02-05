@@ -8,7 +8,7 @@ module.exports.emaileFun = function (obj) {
         secure: true,
         auth: {
             user: '2318927272@qq.com',
-            pass: ''
+            pass: 'dcolsjfdzqaveaji'
         }
     });
     let mailOptions = {

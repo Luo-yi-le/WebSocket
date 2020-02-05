@@ -16,7 +16,9 @@ let stat=util.promisify(fs.stat);
 let readdir=util.promisify(fs.readdir);
 class Server{
     constructor(command) {
+        console.log(this.config)
         this.config = {...config,...command};// config和命令行的内容展示
+        console.log(this.config)
         this.template = template;
     };
     async handleRequest(req, res) {
@@ -78,7 +80,6 @@ class Server{
         if (eTag !== ifNoneMatch && lastModified !== ifModifiedSince) {
             return false;
         }
-
         return true;
     };
     // 是否压缩
@@ -144,7 +145,7 @@ class Server{
     }
     start() {
         let server = http.createServer(this.handleRequest.bind(this));
-        server.listen(this.config.port, ()=> {
+        server.listen(this.config.port, (res)=> {
             console.log(`server start http://${this.config.host}:${chalk.green(this.config.port)}`);
         });
     }
