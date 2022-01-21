@@ -30,7 +30,7 @@
     "http-server": "^0.11.1",
     "images": "^3.0.2",
     "ip": "^1.1.5",
-    "log4js": "^4.5.1",
+    "log4js": "^6.4.0",
     "mime": "latest",
     "mongodb": "^3.2.7",
     "multer": "^1.4.2",
